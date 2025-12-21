@@ -25,6 +25,11 @@ Enforcement
 Whenever decomposing, this file is authoritative.
 Violations are drift.
 
+Audit Requirement
+- Output MUST contain an "AUDIT" section before the "FINAL" list.
+- Audit must explicitly list each rule as PASS or FAIL.
+- Missing audit means the decomposition is invalid.
+
 Output rule
-Only a numbered list of capabilities.
-No prose before or after.
+Only a numbered list of capabilities in the FINAL section.
+No prose before or after the list.

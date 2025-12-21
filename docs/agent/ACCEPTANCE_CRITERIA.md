@@ -23,7 +23,12 @@ Enforcement
 Whenever writing acceptance criteria, this file is authoritative.
 Violations are drift.
 
+Audit Requirement
+- Output MUST contain an "AUDIT" section before the "FINAL" list.
+- Audit must explicitly list each rule as PASS or FAIL.
+- Missing audit means the criteria are invalid.
+
 Output rule
-Only a numbered list.
+Only a numbered list in the FINAL section.
 One sentence per item.
-No prose before or after.
+No prose before or after the list.

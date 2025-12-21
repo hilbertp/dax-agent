@@ -16,8 +16,15 @@ Before proceeding, ii-agent must re-read and self-audit against:
 - docs/agent/DECOMPOSITION.md
 - docs/agent/ACCEPTANCE_CRITERIA.md
 
+## Audit as Artifact
+- Any required self-audit MUST be emitted as an external artifact.
+- An audit that is not output does not count as performed.
+- Outputs without visible AUDIT sections are invalid by definition.
+- Internal reasoning or "mental checks" have zero validity.
+
 ## Stop Conditions
-If any audit fails, stop, revert, log the triggered rule, and request a corrected plan.
+If any audit section is missing, incomplete, ambiguous, or failing, stop, revert, log the triggered rule, and request a corrected plan.
+Proceeding without visible audit is a contract violation.
 
 ## Evidence Rule
 ii-agent must attach evidence for verification (test output or browser proof) when applicable.
