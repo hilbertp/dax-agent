@@ -41,3 +41,10 @@ Proceeding without visible audit is a contract violation.
 ## Evidence Rule
 ii-agent must attach evidence for verification (test output or browser proof) when applicable.
 If not applicable (docs only change), evidence is the git diff plus a successful push.
+
+## Authority document verification
+- Whenever the agent creates, modifies, or claims compliance with any authoritative document (IDENTITY.md, DECOMPOSITION.md, ACCEPTANCE_CRITERIA.md, WORKFLOW_OVERVIEW.md), it MUST include formatting proof in its output.
+- Formatting proof MUST include:
+  - For Markdown authority documents: a command output showing line structure (e.g. `sed -n '1,40p' <file>` or equivalent).
+  - For JSON authority documents: a successful parse validation (e.g. `jq . <file>` or equivalent).
+- Claims of compliance without proof are invalid.
