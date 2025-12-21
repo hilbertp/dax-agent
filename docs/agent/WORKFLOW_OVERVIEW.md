@@ -3,6 +3,13 @@
 ## Purpose
 This document defines the operational lifecycle for ii-agent when executing tasks. It ensures consistency, reproducibility, and strict adherence to established contracts by defining the sequence of operations and mandatory checkpoints for every unit of work.
 
+## Default entrypoint
+1. Every task begins by reading docs/MANIFEST.json.
+2. The agent must treat MANIFEST as the single source of truth for what to load next.
+3. The user prompt is not the authority for process, only for the task intent.
+4. If the agent cannot access the manifest, it must stop and request the manifest content or a repo link.
+5. The agent must never require the user to restate authority paths in prompts.
+
 ## Core Loop
 1. Decompose the user story into atomic capabilities.
 2. Define AC (Acceptance Criteria) for each capability.
