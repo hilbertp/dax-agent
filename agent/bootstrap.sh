@@ -8,11 +8,12 @@ missing_files=0
 
 check_file() {
     if [ ! -f "$1" ]; then
-        echo "Error: Missing required file: $1"
+        echo "Error: missing $1"
         missing_files=1
     fi
 }
 
+# Verify existence of every file listed in MANIFEST entrypoints
 check_file "docs/MANIFEST.json"
 check_file "docs/agent/WORKFLOW_OVERVIEW.md"
 check_file "docs/agent/DECOMPOSITION.md"
