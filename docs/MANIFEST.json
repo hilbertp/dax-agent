@@ -8,6 +8,7 @@
   },
   "entrypoints": {
     "docs_root": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/",
-    "agent_docs_root": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/"
+    "agent_docs_root": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/",
+    "workflow_overview": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/WORKFLOW_OVERVIEW.md"
   }
 }
