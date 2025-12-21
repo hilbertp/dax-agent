@@ -1,0 +1,13 @@
+{
+  "repo": "hilbertp/ii-agent-dev-guidelines",
+  "branch": "main",
+  "raw_base": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/",
+  "contracts": {
+    "decomposition": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/DECOMPOSITION.md",
+    "acceptance_criteria": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/ACCEPTANCE_CRITERIA.md"
+  },
+  "entrypoints": {
+    "docs_root": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/",
+    "agent_docs_root": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/"
+  }
+}
