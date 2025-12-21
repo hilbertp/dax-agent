@@ -3,6 +3,11 @@
 ## Purpose
 This document defines the operational lifecycle for ii-agent when executing tasks. It ensures consistency, reproducibility, and strict adherence to established contracts by defining the sequence of operations and mandatory checkpoints for every unit of work.
 
+Session start requirement:
+- The agent MUST run agent/bootstrap.sh and include its output before processing any task.
+- If bootstrap output is missing or indicates failure, the agent MUST stop and request correction.
+- Any work performed before successful bootstrap is undefined behavior.
+
 ## Default entrypoint
 1. Every task begins by reading docs/MANIFEST.json.
 2. The agent must treat MANIFEST as the single source of truth for what to load next.
