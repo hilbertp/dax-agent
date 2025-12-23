@@ -16,15 +16,45 @@ Session start requirement:
 5. The agent must never require the user to restate authority paths in prompts.
 
 ## Core Loop
+The core loop contains these required activities:
 1. Decompose the user story into atomic capabilities.
 2. Define AC (Acceptance Criteria) for each capability.
-3. Implement the solution.
+3. Implement the solution on a sprint branch.
 4. Verify the implementation against AC.
 5. Run Regression Gate (end of sprint).
-6. Commit the changes.
-7. Report the results.
+6. Run Stakeholder Review Gate.
+7. Run Sprint Closure Gate.
+8. Merge sprint branch to main.
+9. Report the results.
+
+## Canonical execution order (mandatory)
+
+This section defines the only valid execution order.
+If another section appears to imply a different order, this section wins.
+
+A) Start of session
+1. Run agent/bootstrap.sh and include its output.
+2. Read docs/MANIFEST.json and load authority docs from the manifest entrypoints.
+
+B) Inside a sprint branch
+3. Decompose, then emit AUDIT and FINAL.
+4. Define acceptance criteria, then emit AUDIT and FINAL.
+5. Implement incrementally. Commits on the sprint branch are allowed at any time.
+
+C) End of sprint gates (must happen in this order)
+6. Run Regression Gate. If it fails, fix and rerun until pass or user stops.
+7. Run Stakeholder Review Gate. Outcome is Approve, Amend, or Reject.
+8. If Amend, remain on the same sprint branch and repeat steps 6 and 7.
+9. If Reject, stop. No merge to main occurs.
+
+D) Closure and merge
+10. If Approve, run Sprint Closure Gate (including any required regression updates and rerun).
+11. Merge sprint branch to main exactly once, after Sprint Closure passes.
+12. Report results and propose next sprint, then wait for stakeholder approval to start.
 
 ## Regression Gate (end of sprint)
+
+This gate is executed on the sprint branch, never on main.
 
 1. Purpose
 Regression tests are the end of sprint safety net. Natural Language Acceptance Criteria are for intra sprint verification. Regression is for protecting previously working behavior.
@@ -53,6 +83,67 @@ c) the relevant part of the test output
 
 7. Relationship to merge
 Stakeholder approval may only be requested after the regression gate passes, or is explicitly skipped because no regression suite exists.
+
+## Stakeholder Review Gate
+
+This gate is executed on the sprint branch, never on main.
+
+1. Purpose  
+Stakeholder review is the human validation checkpoint.  
+The sprint is not accepted until a stakeholder explicitly approves the delivered increment.
+
+2. Preconditions  
+The Regression Gate must have passed, or been explicitly skipped because no regression suite exists.
+
+3. What the agent must present  
+The agent MUST present, in a concise and human-readable form:
+a) a summary of what changed in this sprint  
+b) where and how the increment can be reviewed (URL, dev command, or artifact)  
+c) which acceptance criteria were verified and how  
+d) any known limitations, tradeoffs, or open issues  
+
+4. Allowed outcomes  
+The stakeholder MUST choose exactly one:
+a) Approve  
+b) Amend  
+c) Reject  
+
+5. Outcome handling  
+- Approve: proceed to Sprint Closure Gate.  
+- Amend: remain on the same sprint branch, apply requested changes, then repeat Regression Gate and Stakeholder Review Gate.  
+- Reject: abandon or deprecate the sprint branch. No merge occurs.
+
+6. Evidence requirement  
+The agent MUST record:
+- the stakeholder decision
+- any amendment requests or rejection reason
+
+Claims of stakeholder approval without explicit evidence are invalid.
+
+## Sprint Closure Gate
+
+This gate is executed on the sprint branch, never on main.
+
+1. Purpose
+Sprint closure makes the sprint releasable, not just demoable.
+
+2. Preconditions
+Stakeholder outcome is Approve.
+
+3. Closure checklist
+a) Add or update regression tests that cover the newly approved behavior, if a regression framework exists.
+b) Run the full regression suite again after adding or updating tests.
+c) If the suite fails, fix and rerun until pass or stakeholder stops the sprint.
+
+4. Evidence requirements
+The agent MUST include:
+a) the exact regression command executed
+b) exit status
+c) relevant test output excerpt
+
+5. Merge rule
+Merge to main happens once, after closure checklist passes.
+No work is considered complete until the merge is done.
 
 ## Self Audit Gates
 Before proceeding, ii-agent must re-read and self-audit against:
