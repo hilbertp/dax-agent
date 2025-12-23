@@ -1,12 +1,12 @@
 {
-  "repo": "hilbertp/ii-agent-dev-guidelines",
+  "repo": "hilbertp/dax-agent",
   "branch": "main",
   "entrypoints": {
-    "workflow": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/WORKFLOW_OVERVIEW.md",
-    "decomposition": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/DECOMPOSITION.md",
-    "acceptance_criteria": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/ACCEPTANCE_CRITERIA.md",
-    "identity": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/docs/agent/IDENTITY.md",
-    "bootstrap": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/agent/bootstrap.sh",
-    "readme": "https://raw.githubusercontent.com/hilbertp/ii-agent-dev-guidelines/main/README.md"
+    "workflow": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/agent/WORKFLOW_OVERVIEW.md",
+    "decomposition": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/agent/DECOMPOSITION.md",
+    "acceptance_criteria": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/agent/ACCEPTANCE_CRITERIA.md",
+    "identity": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/agent/IDENTITY.md",
+    "bootstrap": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+    "readme": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md"
   }
 }
