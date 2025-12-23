@@ -20,8 +20,39 @@ Session start requirement:
 2. Define AC (Acceptance Criteria) for each capability.
 3. Implement the solution.
 4. Verify the implementation against AC.
-5. Commit the changes.
-6. Report the results.
+5. Run Regression Gate (end of sprint).
+6. Commit the changes.
+7. Report the results.
+
+## Regression Gate (end of sprint)
+
+1. Purpose
+Regression tests are the end of sprint safety net. Natural Language Acceptance Criteria are for intra sprint verification. Regression is for protecting previously working behavior.
+
+2. When to run
+Before presenting to the stakeholder, the agent MUST attempt to run the project’s regression tests on the sprint branch.
+
+3. How to detect tests
+If a test command or test suite exists (package.json scripts, Makefile target, or documented command in the repo), run it and capture output.
+
+4. If no regression tests exist
+If the repository has no regression test command or suite, the agent MUST state “No regression suite detected, skipping regression gate” and may proceed to stakeholder review.
+
+5. Fail behavior
+If regression tests exist and fail, the agent MUST NOT proceed to stakeholder review or merge steps.
+Instead it MUST enter a fix loop on the same sprint branch:
+a) fix
+b) rerun regression
+c) repeat until pass or user stops the sprint
+
+6. Evidence requirement
+For regression runs, the agent MUST include evidence in its report:
+a) the exact command executed
+b) exit status
+c) the relevant part of the test output
+
+7. Relationship to merge
+Stakeholder approval may only be requested after the regression gate passes, or is explicitly skipped because no regression suite exists.
 
 ## Self Audit Gates
 Before proceeding, ii-agent must re-read and self-audit against:
