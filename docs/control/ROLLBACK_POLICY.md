@@ -16,6 +16,31 @@ When a rollback is required, identify the target using the first available optio
 2. **Last known good deployed SHA** recorded by CI/deploy logs or monitoring.
 3. **Revert the last release PR merge commit** (single merge revert preferred; simplifies audit and redo if needed).
 
+## Canonical Rollback Execution (Git-only)
+
+### Identify the rollback target
+Use the deterministic order above:
+1. Check for production release tags (e.g., `v1.2.3`, `release-2025-12-24`).
+2. If no tag, check CI/deploy logs for last known good deployed SHA.
+3. If no deploy SHA, revert the last merge commit to main.
+
+### Git strategy
+- **Branch naming:** `rollback/<YYYY-MM-DD>/<short-reason>` (e.g., `rollback/2025-12-25/fix-auth-bug`)
+- **Preferred approach:** Revert the merge commit(s) using `git revert -m 1 <merge_sha>`.
+- **Fallback approach:** If no merge commit exists, revert the specific commit range using `git revert --no-commit <last_good_sha>..HEAD`.
+
+### Evidence requirements
+- Commands executed (exact strings, including SHAs)
+- Exit status for each command (0 = success)
+- PR link
+- Stability restored criterion: logs clear, error rate normal, health check passes
+
+### Hard rules
+- No force push to main
+- No history rewrite on main (no `git reset --hard`, no `git rebase` on main)
+- No direct push to main (all rollbacks via PR)
+- Human approval and merge required for all rollback PRs
+
 ## Technical Rollback Patterns
 
 ### Pattern 1: Revert a merge commit (recommended)
