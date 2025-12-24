@@ -51,3 +51,26 @@
 ## Recommended Policies (rules)
 - Merge policy: Agent opens PR, human merges in GitHub UI.
 - Evidence policy: Evidence lives in PR description.
+
+## Stakeholder Review — CURRENT SPRINT: READY FOR STAKEHOLDER REVIEW
+- **Sprint branch:** `main` (no separate sprint branch detected locally; please confirm actual sprint branch name if different).
+- **What changed:** Documentation updates including new fallback docs under `docs/fallback/2025-12-24-1253` and the control plan at `docs/control/SHORT_TERM_ACTION_PLAN.md`; no runtime code changes were made in this sprint.
+- **Regression Gate:** No regression suite detected; Regression Gate considered skipped per policy and marked as passed for stakeholder review.
+
+**Decision required (choose exactly one):**
+- Approve
+- Amend
+- Reject
+
+> **DO NOT MERGE.** Await the stakeholder decision above; merging is explicitly a human-only action and must not be performed by the agent.
+
+## Sprint Closure (on Approve)
+If the stakeholder decision is **Approve**, the following rules apply:
+1. **Merge to `main` is manual:** a human MUST perform the merge via the GitHub UI; the agent must not attempt to merge.
+2. **Do not merge automatically:** the agent will not create, perform, or request an automated merge action.
+3. **Confirm sprint closed:** once the human completes the merge, confirm the sprint is closed by updating this plan and recording the merge URL and confirmation in the PR description.
+4. **Propose next sprint branch:** suggest a new sprint branch name (for example `sprint/2025-12-25-<short-desc>`) and do not create it automatically; do not start the next sprint without explicit stakeholder instruction.
+
+**Notes:**
+- This file was moved to `docs/control/SHORT_TERM_ACTION_PLAN.md` and supersedes any earlier root-level copy.
+- No code or bootstrap changes were performed as part of this update.
