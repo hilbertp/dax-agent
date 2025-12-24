@@ -15,10 +15,10 @@ check_file() {
 
 # Verify existence of every file listed in MANIFEST entrypoints
 check_file "docs/MANIFEST.json"
-check_file "docs/agent/WORKFLOW_OVERVIEW.md"
-check_file "docs/agent/DECOMPOSITION.md"
-check_file "docs/agent/ACCEPTANCE_CRITERIA.md"
-check_file "docs/agent/IDENTITY.md"
+check_file "docs/authority/WORKFLOW_OVERVIEW.md"
+check_file "docs/authority/DECOMPOSITION.md"
+check_file "docs/authority/ACCEPTANCE_CRITERIA.md"
+check_file "docs/authority/IDENTITY.md"
 
 # 2. Exit with status 1 if any file is missing
 if [ "$missing_files" -ne 0 ]; then

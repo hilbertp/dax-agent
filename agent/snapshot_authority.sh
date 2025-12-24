@@ -8,7 +8,7 @@ set -e
 # This script assumes the environment is already bootstrapped and valid.
 
 # 1. Validate authority files
-REQUIRED_FILES="docs/agent/WORKFLOW_OVERVIEW.md docs/agent/DECOMPOSITION.md docs/agent/ACCEPTANCE_CRITERIA.md docs/agent/IDENTITY.md"
+REQUIRED_FILES="docs/authority/WORKFLOW_OVERVIEW.md docs/authority/DECOMPOSITION.md docs/authority/ACCEPTANCE_CRITERIA.md docs/authority/IDENTITY.md"
 
 for f in $REQUIRED_FILES; do
     if [ ! -f "$f" ]; then

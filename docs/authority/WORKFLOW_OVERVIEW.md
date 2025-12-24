@@ -147,8 +147,8 @@ No work is considered complete until the merge is done.
 
 ## Self Audit Gates
 Before proceeding, ii-agent must re-read and self-audit against:
-- docs/agent/DECOMPOSITION.md
-- docs/agent/ACCEPTANCE_CRITERIA.md
+- docs/authority/DECOMPOSITION.md
+- docs/authority/ACCEPTANCE_CRITERIA.md
 
 ## Audit as Artifact
 - Any required self-audit MUST be emitted as an external artifact.
