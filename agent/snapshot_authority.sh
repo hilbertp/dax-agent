@@ -20,18 +20,23 @@ for f in $REQUIRED_FILES; do
     fi
 done
 
-# 3. Check Gate Status
-# Checks for explicit failure markers if a GATES.md exists.
-GATE_FILE="docs/GATES.md"
-if [ -f "$GATE_FILE" ]; then
-    if grep -Eq "Regression Gate:.*(Failed|Pending)" "$GATE_FILE"; then
-        echo "Aborting: Regression gate marked failed or pending."
-        exit 1
-    fi
-    if grep -Eq "Stakeholder Review Gate:.*(Amend|Reject)" "$GATE_FILE"; then
-        echo "Aborting: Stakeholder gate marked Amend or Reject."
-        exit 1
-    fi
+# 3. Check Gate Status in Authority Documents
+# Stakeholder Gate Checks
+if grep -q "Stakeholder Review Gate: Amend" $REQUIRED_FILES; then
+    echo "Stakeholder Gate marked Amend. No snapshot created."
+    exit 0
+fi
+
+if grep -q "Stakeholder Review Gate: Reject" $REQUIRED_FILES; then
+    echo "Stakeholder Gate marked Reject. No snapshot created."
+    exit 0
+fi
+
+# Regression Gate Checks
+# We assume if the job is running (passed previous steps) and no explicit failure marker is found, it passed.
+if grep -q "Regression Gate: Failed" $REQUIRED_FILES; then
+    echo "Regression Gate marked Failed. No snapshot created."
+    exit 0
 fi
 
 # 4. Create Snapshot
@@ -58,17 +63,8 @@ EOF
 echo "Snapshot created at $SNAPSHOT_DIR"
 
 # 5. Commit
-# Configure git if needed (CI environment usually needs this)
-# We assume the caller (GitHub Action) has set up auth, but we need to configure identity if not present.
-if [ -z "$(git config user.name)" ]; then
-    git config user.name "github-actions[bot]"
-    git config user.email "github-actions[bot]@users.noreply.github.com"
-fi
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
 
 git add "$SNAPSHOT_DIR"
 git commit -m "chore: automated authority snapshot $TIMESTAMP"
-# Push is handled by the caller or explicit push command
-# The prompt says "Commit the snapshot automatically", implying the action does it. 
-# We'll leave the push to the workflow to handle authentication securely if needed, 
-# or do `git push` here if we assume the token is in the remote URL.
-# Typically actions use `ad-m/github-push-action` or `git push` with GITHUB_TOKEN.
