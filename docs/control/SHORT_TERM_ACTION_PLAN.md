@@ -1,5 +1,7 @@
 # Immediate Workflow Control Plan
 
+**CONFIGURATION MODE: defining behavior only. No product development in this phase.**
+
 ## Done
 - [x] Stable sprint-based workflow defined
 - [x] Regression Gate implemented
@@ -74,3 +76,27 @@ If the stakeholder decision is **Approve**, the following rules apply:
 **Notes:**
 - This file was moved to `docs/control/SHORT_TERM_ACTION_PLAN.md` and supersedes any earlier root-level copy.
 - No code or bootstrap changes were performed as part of this update.
+
+## Post-Merge: Regression Suite Building
+After a human merges the sprint branch to `main`, and before starting the next sprint branch:
+- The agent must add or update regression tests to cover the just-approved behavior.
+- The tests must align with the repo's native ecosystem standard:
+  - For JavaScript/TypeScript: Playwright (E2E) or Vitest (unit/integration)
+  - For Python: pytest
+  - For other ecosystems: agent must propose the best-fit framework and wait for human approval before proceeding.
+- Evidence requirement: agent must link or attach test run output in the PR description or in `docs/evidence/<sprint-branch>/`.
+- Regression suite work happens on a dedicated branch (e.g., `tests/2025-12-25-<description>`) and follows the same PR + human merge workflow.
+
+## Rollback Definition
+Rollback is an emergency process that may be triggered even if regression tests passed.
+
+**Rollback playbook (docs only):**
+1. Identify the last known good commit on `main`.
+2. Create a rollback PR that reverts the offending merge commit (or restores the prior state).
+3. Require explicit human approval and human merge via GitHub UI.
+4. Record a short incident note in `docs/control/incident-<iso-date>.md` (file name suggestion; agent must not create it automatically).
+
+**Hard constraints:**
+- Agent must never force-push to `main`.
+- Agent must never rewrite `main` history.
+- All rollbacks follow the standard PR workflow.
