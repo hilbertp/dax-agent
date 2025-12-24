@@ -13,14 +13,14 @@
 
 ## Current Mode
 - [x] Development temporarily switched to GitHub Copilot
-- [x] ii-agent sandbox usage paused due to credential instability
+- [x] GitHub Copilot sandbox usage paused due to credential instability
 - [x] Core workflow preserved independent of tooling
 
 ## Next
 - [x] Finalize merge trigger (GitHub UI only)
 - [x] Confirm regression test ownership and location
 - [x] Freeze workflow as v1 control baseline
-- [ ] Re-evaluate ii-agent once sandbox access is stable
+- [ ] Re-evaluate GitHub Copilot once sandbox access is stable
 
 ## Current Risks
 - [ ] Sandbox authentication volatility
