@@ -22,8 +22,8 @@
 - [x] Finalize merge trigger (GitHub UI only)
 - [x] Confirm regression test ownership and location
 - [x] Freeze workflow as v1 control baseline
+- [x] Define post-merge regression test build phase (see POST_MERGE_REGRESSION_POLICY.md)
 - [ ] Re-evaluate GitHub Copilot once sandbox access is stable
-- [ ] Define post-merge regression test build phase
 - [ ] Define rollback procedure
 
 ## Current Risks
