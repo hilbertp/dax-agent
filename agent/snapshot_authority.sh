@@ -4,13 +4,10 @@ set -e
 # agent/snapshot_authority.sh
 # Automated fallback snapshot generator
 
-# 1. Run bootstrap
-if ! ./agent/bootstrap.sh; then
-    echo "Bootstrap failed. Aborting."
-    exit 1
-fi
+# Note: Bootstrap MUST be run by the caller (workflow) before this script.
+# This script assumes the environment is already bootstrapped and valid.
 
-# 2. Validate authority files
+# 1. Validate authority files
 REQUIRED_FILES="docs/agent/WORKFLOW_OVERVIEW.md docs/agent/DECOMPOSITION.md docs/agent/ACCEPTANCE_CRITERIA.md docs/agent/IDENTITY.md"
 
 for f in $REQUIRED_FILES; do
@@ -20,7 +17,7 @@ for f in $REQUIRED_FILES; do
     fi
 done
 
-# 3. Check Gate Status in Authority Documents
+# 2. Check Gate Status in Authority Documents
 # Stakeholder Gate Checks
 if grep -q "Stakeholder Review Gate: Amend" $REQUIRED_FILES; then
     echo "Stakeholder Gate marked Amend. No snapshot created."
@@ -33,13 +30,12 @@ if grep -q "Stakeholder Review Gate: Reject" $REQUIRED_FILES; then
 fi
 
 # Regression Gate Checks
-# We assume if the job is running (passed previous steps) and no explicit failure marker is found, it passed.
 if grep -q "Regression Gate: Failed" $REQUIRED_FILES; then
     echo "Regression Gate marked Failed. No snapshot created."
     exit 0
 fi
 
-# 4. Create Snapshot
+# 3. Create Snapshot
 TIMESTAMP=$(date -u +%Y-%m-%d-%H%M)
 SNAPSHOT_DIR="docs/fallback/$TIMESTAMP"
 
@@ -62,7 +58,9 @@ EOF
 
 echo "Snapshot created at $SNAPSHOT_DIR"
 
-# 5. Commit
+# 4. Commit
+# Note: Git config is handled by the environment or workflow if needed,
+# but setting it here ensures the commit works even if not globally set.
 git config user.name "github-actions[bot]"
 git config user.email "github-actions[bot]@users.noreply.github.com"
 
