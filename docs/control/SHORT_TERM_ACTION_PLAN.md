@@ -19,7 +19,7 @@
 ## Next
 - [x] Finalize merge trigger (GitHub UI only)
 - [x] Confirm regression test ownership and location
-- [ ] Freeze workflow as v1 control baseline
+- [x] Freeze workflow as v1 control baseline
 - [ ] Re-evaluate ii-agent once sandbox access is stable
 
 ## Current Risks
