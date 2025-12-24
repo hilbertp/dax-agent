@@ -53,16 +53,16 @@
 - Evidence policy: Evidence lives in PR description.
 
 ## Stakeholder Review — CURRENT SPRINT: READY FOR STAKEHOLDER REVIEW
-- **Sprint branch:** `main` (no separate sprint branch detected locally; please confirm actual sprint branch name if different).
-- **What changed:** Documentation updates including new fallback docs under `docs/fallback/2025-12-24-1253` and the control plan at `docs/control/SHORT_TERM_ACTION_PLAN.md`; no runtime code changes were made in this sprint.
-- **Regression Gate:** No regression suite detected; Regression Gate considered skipped per policy and marked as passed for stakeholder review.
+- **Sprint branch:** `sprint/2025-12-24-control-plan`.
+- **What changed:** Documentation updates including new fallback docs under `docs/fallback/2025-12-24-1253` and the control plan at `docs/control/SHORT_TERM_ACTION_PLAN.md`.
+- **Regression Gate:** skipped (no suite detected).
 
-**Decision required (choose exactly one):**
+**Decision required (choose exactly one) on the PR:**
 - Approve
 - Amend
 - Reject
 
-> **DO NOT MERGE.** Await the stakeholder decision above; merging is explicitly a human-only action and must not be performed by the agent.
+> **DO NOT MERGE.** Stakeholder decision is recorded on the PR; a human must perform the merge in the GitHub UI only. The agent must not merge.
 
 ## Sprint Closure (on Approve)
 If the stakeholder decision is **Approve**, the following rules apply:
