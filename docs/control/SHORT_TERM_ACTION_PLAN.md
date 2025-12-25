@@ -24,10 +24,8 @@
 - [x] Freeze workflow as v1 control baseline
 - [x] Define post-merge regression test build phase (see POST_MERGE_REGRESSION_POLICY.md)
 - [x] Define rollback procedure (see ROLLBACK_POLICY.md)
-- [ ] Re-evaluate GitHub Copilot once sandbox access is stable
 
 ## Current Risks
-- [ ] Sandbox authentication volatility
 - [ ] Tooling drift from defined workflow
 - [ ] Accidental merge bypass without UI controls
 
