@@ -9,4 +9,31 @@
     "bootstrap": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
     "readme": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md"
   }
+  ,
+  "control": {
+    "short_term_action_plan": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/SHORT_TERM_ACTION_PLAN.md",
+      "purpose": "Overview cockpit for current configuration state and immediate control items"
+    },
+    "post_merge_regression_policy": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/POST_MERGE_REGRESSION_POLICY.md",
+      "purpose": "Policy for building/maintaining regression tests post-merge before next sprint"
+    },
+    "rollback_policy": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/ROLLBACK_POLICY.md",
+      "purpose": "Production-grade rollback behavior and deterministic git-only routine"
+    },
+    "merge_trigger": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/MERGE_TRIGGER.md",
+      "purpose": "Human-only merge rule; agent opens PR, human merges via GitHub UI"
+    },
+    "workflow_baseline": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/WORKFLOW_BASELINE.md",
+      "purpose": "Frozen v1 workflow control baseline"
+    },
+    "regression_ownership": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/REGRESSION_OWNERSHIP.md",
+      "purpose": "Ownership and location conventions for regression suite"
+    }
+  }
 }
