@@ -51,6 +51,7 @@
     "docs/authority/DECOMPOSITION.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
     "docs/authority/ACCEPTANCE_CRITERIA.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
     "docs/authority/IDENTITY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
+    "docs/authority/REPO_STRUCTURE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/REPO_STRUCTURE.md",
     "SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
     "docs/control/POST_MERGE_REGRESSION_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
     "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
@@ -67,7 +68,8 @@
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md"
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/REPO_STRUCTURE.md"
     ],
     "bootstrap": [
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
