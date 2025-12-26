@@ -47,6 +47,9 @@
     "docs/authority/IDENTITY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
     "docs/control/SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
     "docs/control/POST_MERGE_REGRESSION_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
-    "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md"
+    "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
+    "docs/control/MERGE_TRIGGER.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
+    "docs/control/WORKFLOW_BASELINE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
+    "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md"
   }
 }
