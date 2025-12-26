@@ -1,6 +1,7 @@
 {
   "repo": "hilbertp/dax-agent",
   "branch": "main",
+  "raw_base": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/",
   "entrypoints": {
     "workflow": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
     "decomposition": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
@@ -8,8 +9,7 @@
     "identity": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
     "bootstrap": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
     "readme": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md"
-  }
-  ,
+  },
   "control": {
     "short_term_action_plan": {
       "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/SHORT_TERM_ACTION_PLAN.md",
@@ -35,5 +35,18 @@
       "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/sprint/2025-12-24-control-plan/docs/control/REGRESSION_OWNERSHIP.md",
       "purpose": "Ownership and location conventions for regression suite"
     }
+  },
+  "files": {
+    "README.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md",
+    "agent/bootstrap.sh": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+    "agent/snapshot_authority.sh": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh",
+    "docs/MANIFEST.json": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
+    "docs/authority/WORKFLOW_OVERVIEW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
+    "docs/authority/DECOMPOSITION.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
+    "docs/authority/ACCEPTANCE_CRITERIA.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
+    "docs/authority/IDENTITY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
+    "docs/control/SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
+    "docs/control/POST_MERGE_REGRESSION_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
+    "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md"
   }
 }
