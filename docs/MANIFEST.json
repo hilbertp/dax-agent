@@ -14,7 +14,7 @@
   },
   "control": {
     "short_term_action_plan": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
       "purpose": "Overview cockpit for current configuration state and immediate control items"
     },
     "post_merge_regression_policy": {
@@ -51,7 +51,7 @@
     "docs/authority/DECOMPOSITION.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
     "docs/authority/ACCEPTANCE_CRITERIA.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
     "docs/authority/IDENTITY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
-    "docs/control/SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
+    "SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
     "docs/control/POST_MERGE_REGRESSION_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
     "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
     "docs/control/MERGE_TRIGGER.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
@@ -74,7 +74,7 @@
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh"
     ],
     "control_docs": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
