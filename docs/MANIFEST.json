@@ -82,11 +82,6 @@
     ],
     "visual": [
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md"
-    ],
-    "fallback_dirs": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/"
     ]
   }
 }
