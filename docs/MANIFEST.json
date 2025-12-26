@@ -8,6 +8,8 @@
     "acceptance_criteria": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
     "identity": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
     "bootstrap": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+    "snapshot_authority": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh",
+    "manifest": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
     "readme": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md"
   },
   "control": {
@@ -50,6 +52,41 @@
     "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
     "docs/control/MERGE_TRIGGER.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
     "docs/control/WORKFLOW_BASELINE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
-    "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md"
+    "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
+    "docs/visual/WORKFLOW_FLOW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md",
+    ".github/workflows/authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
+    "authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
+  },
+  "behavior_controls": {
+    "authority_docs": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md"
+    ],
+    "bootstrap": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh"
+    ],
+    "control_docs": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SHORT_TERM_ACTION_PLAN.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md"
+    ],
+    "automation": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
+    ],
+    "visual": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md"
+    ],
+    "fallback_dirs": [
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/"
+    ]
   }
 }
