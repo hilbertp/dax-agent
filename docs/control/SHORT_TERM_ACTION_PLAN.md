@@ -26,8 +26,8 @@
 - [x] Define rollback procedure (see ROLLBACK_POLICY.md)
 
 ## Current Risks
-- [ ] Tooling drift from defined workflow
-- [ ] Accidental merge bypass without UI controls
+- Tooling drift from defined workflow
+- Accidental merge bypass without UI controls
 
 ## Control Principles
 - Agent or Copilot may commit only to sprint branches
@@ -35,14 +35,3 @@
 - Bootstrap is mandatory and authoritative
 - Authority documents override prompts and tools
 - Tooling is replaceable; workflow is not
-
-## Post-merge Regression Build Phase (high level)
-After a human merges a sprint PR to main, before starting the next sprint:
-- Add or update regression tests to cover the approved behavior
-- Attach test run output and exit status in the PR description or docs/evidence
-- Test framework selection rules:
-  - If the repo already has a test runner or existing tests, KEEP IT (no migrations)
-  - If no runner exists, choose the most stable mainstream option in that ecosystem (boring > trendy)
-  - Prioritize CI reliability: deterministic, fast, clear output, easy install
-  - Minimize tool count: one runner for unit/integration; add E2E only if UI flows exist
-  - Freeze the chosen framework by documenting it, and do not change without explicit stakeholder approval
