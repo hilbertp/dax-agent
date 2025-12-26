@@ -36,6 +36,10 @@
     "regression_ownership": {
       "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
       "purpose": "Ownership and location conventions for regression suite"
+    },
+    "stakeholder_sprint_output": {
+      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+      "purpose": "Stakeholder-facing sprint output behavior and decision interface"
     }
   },
   "files": {
@@ -53,6 +57,7 @@
     "docs/control/MERGE_TRIGGER.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
     "docs/control/WORKFLOW_BASELINE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
     "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
+    "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
     "docs/visual/WORKFLOW_FLOW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md",
     ".github/workflows/authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
     "authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
@@ -74,7 +79,8 @@
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md"
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
+      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md"
     ],
     "automation": [
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
