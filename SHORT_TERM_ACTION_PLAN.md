@@ -80,7 +80,8 @@ Anything not explicitly commanded is OUT OF BOUNDS.
 ---
 
 ## What Remains to Finalize — Behavior Gaps
-- [ ] i pulled out short term action plan to project root. reflect it in the manifest
+- [x] i pulled out short term action plan to project root. reflect it in the manifest
+- [ ] make authoritative folder structure and reference it in manifest
 
 - [ ] Stakeholder-facing sprint output definition  
 	(non-technical, impact-focused summary of what changed and why it matters)
@@ -106,6 +107,12 @@ Anything not explicitly commanded is OUT OF BOUNDS.
 	- Sprint number increments only on stakeholder A) Approve
 
 - [ ] Define fallback behavior rules (when Dax pauses, retries, simplifies, or escalates to rollback)
+  
+- [ ] Define Repo Quality SLOs (for Dax in action)
+  - Repository health is evaluated every sprint
+  - Refactoring is triggered only when SLO thresholds are violated
+  - Purpose: prevent structural drift without slowing delivery
+  - Refactor is corrective, bounded, and goal-driven — never perfectionist
 
 ---
 
