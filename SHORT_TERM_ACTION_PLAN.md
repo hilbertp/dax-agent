@@ -62,6 +62,15 @@ Anything not explicitly commanded is OUT OF BOUNDS.
 - [ ] Define kernel consumption contract  
   Product repositories consume Dax as a pinned kernel (versioned behavior via MANIFEST), not by copying or modifying behavior files directly
 
+- [ ] CI/CD Build Oversight & Pre-Build Gates  
+  Dax monitors build pipeline behavior; the implementation agent reports metrics to Dax.  
+  Goals: build-failure minimization and time optimization.  
+  Rules:
+  - Closely watch builds exceeding 5 minutes; treat as a risk signal
+  - Ensure pre-build gates (linting, formatting, type checks) run before full compilation/build
+  - If inefficiency persists, Dax questions the implementor on pipeline quality, tooling fit, and known failure causes
+  - Implementation details (tools, configs, CI steps) are owned by the coding agent and product repo’s CI/CD
+
 ---
 
 ## Control Principles — Final Runtime Behavior

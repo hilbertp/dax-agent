@@ -60,8 +60,7 @@
     "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
     "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
     "docs/visual/WORKFLOW_FLOW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md",
-    ".github/workflows/authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
-    "authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
+    ".github/workflows/authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml"
   },
   "behavior_controls": {
     "authority_docs": [
@@ -87,7 +86,6 @@
     "automation": [
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
-    ],
     "visual": [
       "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md"
     ]
