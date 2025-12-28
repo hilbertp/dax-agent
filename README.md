@@ -1,29 +1,58 @@
 # Dax Agent
 
-This repository defines **Dax**, a senior software development companion agent.
+This repository defines **Dax**, a behavioral configuration for software implementation agents.
 
-Dax is not a framework and not a chatbot.
-It is a **workflow-driven engineering agent** that operates under strict, explicit rules.
+Dax is not a framework.
+Dax is not a chatbot.
+Dax does not implement software itself.
+
+Dax is a **workflow-shaping layer** that biases an implementation agent toward production-grade behavior by enforcing explicit structure, checkpoints, and review cycles.
 
 This README is for humans.
-It explains what Dax does and how to start a session.
+It explains what Dax is, what it is not, and how to start a session.
 You do **not** need to understand the internal documents to use Dax.
 
 ---
 
-## What Dax Does
+## What Dax Is (v0)
 
-Dax helps design, build, review, and evolve production-grade software by enforcing:
+Dax v0 is a **behavioral influencer**, not a full orchestrator.
 
-- Explicit decomposition of user stories
+It works by:
+- Injecting explicit rules and expectations into an implementation agent
+- Enforcing decomposition, checkpoints, and review cycles
+- Reducing hallucination, narrative progress, and premature completion claims
+
+Dax does **not** own process integrity yet.
+The implementation agent still executes the work.
+Dax shapes *how* that work is approached and reported.
+
+---
+
+## What Dax Is Not
+
+- Not a replacement for engineers
+- Not a project management tool
+- Not an autonomous system
+- Not a decision-maker with its own agenda
+
+Dax does not refuse to work.
+If something is unclear, Dax surfaces options, tradeoffs, and unknowns instead of inventing assumptions.
+
+---
+
+## Core Behaviors Enforced by Dax
+
+When applied correctly, Dax biases the agent toward:
+
+- Explicit decomposition of work
 - Clear acceptance criteria
-- Incremental development on sprint branches
-- Regression verification
-- Mandatory stakeholder review
-- Controlled sprint closure and merge
+- Incremental, demoable progress
+- Regression awareness
+- Stakeholder-facing reporting
+- Controlled sprint boundaries
 
-Dax is opinionated.
-If requirements are vague, inconsistent, or unsound, Dax will say so.
+These behaviors are enforced **through convention and repetition**, not hard technical guarantees.
 
 ---
 
@@ -33,7 +62,8 @@ Dax has **undefined behavior** unless bootstrapped correctly.
 
 **Every session MUST start with bootstrap.**
 
-If bootstrap is skipped, nothing that follows is reliable.
+Bootstrap is the entry point.
+If bootstrap is skipped, Dax is not active.
 
 ---
 
@@ -41,51 +71,5 @@ If bootstrap is skipped, nothing that follows is reliable.
 
 1. Clone this repository.
 2. Run the bootstrap script:
-   ```
+   ```bash
    bash agent/bootstrap.sh
-   ```
-3. After bootstrap succeeds, start a session by giving Dax a kickoff prompt.
-
-That is all.
-
----
-
-## Kickoff Prompt (Copy & Paste)
-
-After bootstrap, copy-paste **exactly** the prompt below into the agent:
-
-```text
-Clone this repository:
-https://github.com/hilbertp/dax-agent
-
-Then run:
-bash agent/bootstrap.sh
-
-After bootstrap succeeds, wait for further instructions.
-```
-
-Do not modify this prompt.
-Do not add explanations.
-Do not skip bootstrap.
-
----
-
-## What Happens Next
-
-After the kickoff prompt:
-
-- Dax initializes its identity and workflow.
-- Dax waits for user stories or tasks.
-- Each sprint runs on its own branch.
-- Regression, stakeholder review, and sprint closure are enforced automatically.
-- Only approved and verified work is merged to main.
-
----
-
-## Important Notes
-
-- This repository contains **authority documents** that define Dax’s behavior.
-- These documents are versioned, validated, and snapshotted automatically.
-- Manual overrides are not supported.
-
-If something feels strict, that is intentional.
