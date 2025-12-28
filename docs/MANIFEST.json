@@ -1,93 +1,409 @@
 {
   "repo": "hilbertp/dax-agent",
-  "branch": "main",
-  "raw_base": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/",
-  "entrypoints": {
-    "workflow": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
-    "decomposition": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
-    "acceptance_criteria": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
-    "identity": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
-    "bootstrap": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-    "snapshot_authority": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh",
-    "manifest": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
-    "readme": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md"
-  },
-  "control": {
-    "short_term_action_plan": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
-      "purpose": "Overview cockpit for current configuration state and immediate control items"
-    },
-    "post_merge_regression_policy": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
-      "purpose": "Policy for building/maintaining regression tests post-merge before next sprint"
-    },
-    "rollback_policy": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
-      "purpose": "Production-grade rollback behavior and deterministic git-only routine"
-    },
-    "merge_trigger": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
-      "purpose": "Human-only merge rule; agent opens PR, human merges via GitHub UI"
-    },
-    "workflow_baseline": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
-      "purpose": "Frozen v1 workflow control baseline"
-    },
-    "regression_ownership": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
-      "purpose": "Ownership and location conventions for regression suite"
-    },
-    "stakeholder_sprint_output": {
-      "url": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
-      "purpose": "Stakeholder-facing sprint output behavior and decision interface"
-    }
-  },
+  "default_branch": "main",
+  "commit": "d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987",
+  "generated_at_utc": "2025-12-28T16:08:59.369297Z",
+  "base_raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main",
+  "base_raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987",
   "files": {
-    "README.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md",
-    "agent/bootstrap.sh": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-    "agent/snapshot_authority.sh": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh",
-    "docs/MANIFEST.json": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
-    "docs/authority/WORKFLOW_OVERVIEW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
-    "docs/authority/DECOMPOSITION.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
-    "docs/authority/ACCEPTANCE_CRITERIA.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
-    "docs/authority/IDENTITY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
-    "docs/authority/REPO_STRUCTURE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/REPO_STRUCTURE.md",
-    "SHORT_TERM_ACTION_PLAN.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
-    "docs/control/POST_MERGE_REGRESSION_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
-    "docs/control/ROLLBACK_POLICY.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
-    "docs/control/MERGE_TRIGGER.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
-    "docs/control/WORKFLOW_BASELINE.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
-    "docs/control/REGRESSION_OWNERSHIP.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
-    "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
-    "docs/visual/WORKFLOW_FLOW.md": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md",
-    ".github/workflows/authority_snapshot.yml": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml"
-  },
-  "behavior_controls": {
-    "authority_docs": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/REPO_STRUCTURE.md"
-    ],
-    "bootstrap": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh"
-    ],
-    "control_docs": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md"
-    ],
-    "automation": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/authority_snapshot.yml"
-    "visual": [
-      "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md"
-    ]
+    ".github/workflows/authority_snapshot.yml": {
+      "path": ".github/workflows/authority_snapshot.yml",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/.github/workflows/authority_snapshot.yml",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/.github/workflows/authority_snapshot.yml",
+      "sha256": "fcb182178744c2f2f15d6f736a2f59e3989f6dd5b135325e551245cc4ccad0e8",
+      "size_bytes": 679
+    },
+    "README.md": {
+      "path": "README.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/README.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/README.md",
+      "sha256": "a90ce8b069f88d8605eb3fc4f72dfdbbd93d3977aa70fcfecd7212641fd6eeb8",
+      "size_bytes": 2155
+    },
+    "SHORT_TERM_ACTION_PLAN.md": {
+      "path": "SHORT_TERM_ACTION_PLAN.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/SHORT_TERM_ACTION_PLAN.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/SHORT_TERM_ACTION_PLAN.md",
+      "sha256": "047c151a500e570d8e3bb785315446a2963727329db3bb58a970867127ee4d94",
+      "size_bytes": 3409
+    },
+    "agent/bootstrap.sh": {
+      "path": "agent/bootstrap.sh",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/agent/bootstrap.sh",
+      "sha256": "60096b985599a9c29d710318bc754414fc7393988399dd0b366bd1e9bed9d160",
+      "size_bytes": 964
+    },
+    "agent/snapshot_authority.sh": {
+      "path": "agent/snapshot_authority.sh",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/snapshot_authority.sh",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/agent/snapshot_authority.sh",
+      "sha256": "3002f825c0775ad6fb4e6ea25da7842802a297939c8d1ee82154b7951c9b9af2",
+      "size_bytes": 1898
+    },
+    "docs/authority/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/authority/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/authority/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/authority/DECOMPOSITION.md": {
+      "path": "docs/authority/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/authority/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/authority/IDENTITY.md": {
+      "path": "docs/authority/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/authority/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/authority/REPO_STRUCTURE.md": {
+      "path": "docs/authority/REPO_STRUCTURE.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/REPO_STRUCTURE.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/authority/REPO_STRUCTURE.md",
+      "sha256": "4b0e2bcad0f0982137ea399a6b2f89dbb5ef5616bbfdff86f167243f92654254",
+      "size_bytes": 1565
+    },
+    "docs/authority/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/authority/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/authority/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/authority/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/control/MERGE_TRIGGER.md": {
+      "path": "docs/control/MERGE_TRIGGER.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/MERGE_TRIGGER.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/MERGE_TRIGGER.md",
+      "sha256": "7ebdce8a9c076acb43961b9522b5e14422000d61d3e28730edd99a0a4c64536d",
+      "size_bytes": 168
+    },
+    "docs/control/POST_MERGE_REGRESSION_POLICY.md": {
+      "path": "docs/control/POST_MERGE_REGRESSION_POLICY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/POST_MERGE_REGRESSION_POLICY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/POST_MERGE_REGRESSION_POLICY.md",
+      "sha256": "6f34db5f7e5c2bcc15b46ecdc8ec94fb8c0bbea5306f1173130794cf64382ac6",
+      "size_bytes": 2302
+    },
+    "docs/control/REGRESSION_OWNERSHIP.md": {
+      "path": "docs/control/REGRESSION_OWNERSHIP.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/REGRESSION_OWNERSHIP.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/REGRESSION_OWNERSHIP.md",
+      "sha256": "335dfaf70fc3855a8e59353326d59d52c73ace3f05d15bda330b5fa3050b2d82",
+      "size_bytes": 335
+    },
+    "docs/control/ROLLBACK_POLICY.md": {
+      "path": "docs/control/ROLLBACK_POLICY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/ROLLBACK_POLICY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/ROLLBACK_POLICY.md",
+      "sha256": "7f550ad9e1a046174fa653cdd3c56b70975320241d38badaff355181accc1797",
+      "size_bytes": 5277
+    },
+    "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": {
+      "path": "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+      "sha256": "3cb9cba59dc697d67251b27776ec21de6b7fd52e0b1e8769998b115b7c9fbf3c",
+      "size_bytes": 2613
+    },
+    "docs/control/WORKFLOW_BASELINE.md": {
+      "path": "docs/control/WORKFLOW_BASELINE.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/WORKFLOW_BASELINE.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/WORKFLOW_BASELINE.md",
+      "sha256": "15955311affa6fd4ce8cb06000efc9082cad4b4fafb30e55859baade232fb406",
+      "size_bytes": 294
+    },
+    "docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-24-0016/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-24-0016/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0016/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-24-0016/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-24-0016/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0016/FALLBACK.json",
+      "sha256": "0b83102ab472a5971f56ee5074d68d024ff82119c6d07f12a9e288f59c4a597b",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-24-0016/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-24-0016/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0016/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-24-0016/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-24-0016/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0016/WORKFLOW_OVERVIEW.md",
+      "sha256": "bd4b5d7e95506c8a5de1d63251ca48dcaaedf237cee1af658654aa599486250a",
+      "size_bytes": 7377
+    },
+    "docs/fallback/2025-12-24-0020/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-24-0020/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0020/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-24-0020/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-24-0020/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0020/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-24-0020/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-24-0020/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0020/FALLBACK.json",
+      "sha256": "1a6202815b14cefaaf8f9ec4cea5b1f002890f563ebd4010d7512a5cd1189b47",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-24-0020/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-24-0020/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0020/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-24-0020/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-24-0020/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0020/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-0020/WORKFLOW_OVERVIEW.md",
+      "sha256": "bd4b5d7e95506c8a5de1d63251ca48dcaaedf237cee1af658654aa599486250a",
+      "size_bytes": 7377
+    },
+    "docs/fallback/2025-12-24-1253/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-24-1253/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-1253/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-24-1253/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-24-1253/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-1253/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-24-1253/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-24-1253/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-1253/FALLBACK.json",
+      "sha256": "538698f7c841d0e9277d35c5970ecaf14984affb806f40d7ff23f7d3b790b07e",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-24-1253/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-24-1253/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-1253/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-24-1253/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-24-1253/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-1253/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-24-1253/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/fallback/2025-12-26-1333/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-26-1333/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1333/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1333/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-26-1333/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-26-1333/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1333/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1333/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-26-1333/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-26-1333/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1333/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1333/FALLBACK.json",
+      "sha256": "e1441fa9477ed743a5b0882ed48b938281cf35ed9b7a469cf34b3606002641f8",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-26-1333/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-26-1333/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1333/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1333/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-26-1333/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-26-1333/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1333/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1333/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/fallback/2025-12-26-1412/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-26-1412/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1412/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1412/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-26-1412/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-26-1412/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1412/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1412/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-26-1412/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-26-1412/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1412/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1412/FALLBACK.json",
+      "sha256": "6c8e03dd6a4aa7902f2e1eb004949d070ab490503e9a1408cd0002512536f061",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-26-1412/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-26-1412/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1412/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1412/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-26-1412/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-26-1412/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1412/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1412/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/fallback/2025-12-26-1620/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-26-1620/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1620/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1620/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-26-1620/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-26-1620/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1620/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1620/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-26-1620/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-26-1620/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1620/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1620/FALLBACK.json",
+      "sha256": "acec53044832e554c9c13852f31409d8b58c4aa228d8bbee6c5e7b32c6351b7f",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-26-1620/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-26-1620/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1620/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1620/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-26-1620/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-26-1620/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1620/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1620/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/fallback/2025-12-26-1757/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-26-1757/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1757/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1757/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-26-1757/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-26-1757/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1757/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1757/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-26-1757/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-26-1757/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1757/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1757/FALLBACK.json",
+      "sha256": "743c73e1eff03bcffe2e4000af3a2779e16d79a1cf5f44634b3e6b252d661f98",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-26-1757/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-26-1757/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1757/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1757/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-26-1757/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-26-1757/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1757/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1757/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/fallback/2025-12-26-1821/ACCEPTANCE_CRITERIA.md": {
+      "path": "docs/fallback/2025-12-26-1821/ACCEPTANCE_CRITERIA.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1821/ACCEPTANCE_CRITERIA.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1821/ACCEPTANCE_CRITERIA.md",
+      "sha256": "c0a0280a380235dc9c85b9f54160e1f4e78662b2d8b70821dc64e74f52d4447d",
+      "size_bytes": 1048
+    },
+    "docs/fallback/2025-12-26-1821/DECOMPOSITION.md": {
+      "path": "docs/fallback/2025-12-26-1821/DECOMPOSITION.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1821/DECOMPOSITION.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1821/DECOMPOSITION.md",
+      "sha256": "2cf00fc697db51e49d0fb3932f4873dfc1bc3999d623d61fd561e953cc49c937",
+      "size_bytes": 1093
+    },
+    "docs/fallback/2025-12-26-1821/FALLBACK.json": {
+      "path": "docs/fallback/2025-12-26-1821/FALLBACK.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1821/FALLBACK.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1821/FALLBACK.json",
+      "sha256": "5977aa092f1b4d70fb68396885d1f6ac21eaa0101617291b7a490bfdcd6fba50",
+      "size_bytes": 163
+    },
+    "docs/fallback/2025-12-26-1821/IDENTITY.md": {
+      "path": "docs/fallback/2025-12-26-1821/IDENTITY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1821/IDENTITY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1821/IDENTITY.md",
+      "sha256": "63fb3096bb62c794ce9ab44e32538e376947849f2eb4a33ba1876821126191e9",
+      "size_bytes": 2392
+    },
+    "docs/fallback/2025-12-26-1821/WORKFLOW_OVERVIEW.md": {
+      "path": "docs/fallback/2025-12-26-1821/WORKFLOW_OVERVIEW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-26-1821/WORKFLOW_OVERVIEW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/fallback/2025-12-26-1821/WORKFLOW_OVERVIEW.md",
+      "sha256": "49c7fff40aa7bfbe7e3011beb7735e79eea20cc6a9edee4c060dcc54d2412562",
+      "size_bytes": 7385
+    },
+    "docs/visual/WORKFLOW_FLOW.md": {
+      "path": "docs/visual/WORKFLOW_FLOW.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/visual/WORKFLOW_FLOW.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/visual/WORKFLOW_FLOW.md",
+      "sha256": "780f619dabb9c8abe2ac3fe598df38b5caa9cfa2171e6abe1715b966db3bb8f6",
+      "size_bytes": 900
+    }
   }
 }
