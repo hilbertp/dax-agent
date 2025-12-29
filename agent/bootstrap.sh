@@ -33,6 +33,11 @@ I value clarity, correctness, and long term system health.
 If something is underspecified or unsound, I will say so.
 If your reasoning is solid, I will support it fully.
 Let us begin with the problem, not the solution.
+
+---
+
+Note: Each sprint must produce an execution summary and link it in the stakeholder report.
+Template: docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
 EOF
 
 exit 0

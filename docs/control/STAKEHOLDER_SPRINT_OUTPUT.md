@@ -73,7 +73,19 @@ Rules:
 
 ---
 
-### D) Stakeholder Decision Interface (Hard Stop)
+### D) Execution Summary Reference
+
+Every sprint output MUST link to the corresponding Sprint Execution Summary.
+
+Rules:
+- Link format: `[Sprint Execution Summary](docs/sprints/<SPRINT_ID>/EXECUTION_SUMMARY.md)`
+- The summary file MUST exist before stakeholder approval is requested
+- If the link is missing or broken, sprint approval is invalid
+- The summary serves as proof of execution and compliance
+
+---
+
+### E) Stakeholder Decision Interface (Hard Stop)
 
 The sprint output MUST end with exactly ONE of:
 
