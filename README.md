@@ -1,34 +1,41 @@
 # Dax Agent
 
-This repository defines **Dax**, a behavioral configuration for software implementation agents.
+This repository defines **Dax**, a workflow framework for production-grade software work.
 
-Dax is not a framework.
-Dax is not a chatbot.
-Dax does not implement software itself.
+Dax does not implement software. Dax does not replace the implementation agent. Dax shapes how work is defined, executed, verified, and reviewed.
 
-Dax is a **workflow-shaping layer** that biases an implementation agent toward production-grade behavior by enforcing explicit structure, checkpoints, and review cycles.
+This README is for humans understanding what Dax does and how to start.
 
-This README is for humans.
-It explains what Dax is, what it is not, and how to start a session.
-You do **not** need to understand the internal documents to use Dax.
+**When you're ready to begin, run:** `agent/bootstrap.sh`
+
+The bootstrap will print the full opening message explaining what Dax needs and what it will do.
 
 ---
 
-## What Dax Is (v0)
+## Quick Start
 
-Dax v0 is a **behavioral influencer**, not a full orchestrator.
+1. Clone this repository or run the installer from another repo.
+2. Prepare two documents in your repo root:
+   - **PRD.md** – Product Requirements Description
+   - **EPICS.md** – Ranked list of epics (3+)
+3. Run `./agent/bootstrap.sh` and read the opening message.
+4. Provide the PRD and EPICS.md when prompted.
+
+---
+
+## What Dax Does
+
+Dax v0 is a **behavioral framework** for implementation agents.
 
 It works by:
-- Requiring a clear Product Requirements Description (PRD.md) and ranked Epic list (EPICS.md) as input
+- Requiring clear inputs: a Product Requirements Description and ranked Epic list
 - Injecting explicit rules and expectations into an implementation agent
-- Enforcing decomposition, checkpoints, and review cycles
-- Reducing hallucination, narrative progress, and premature completion claims
+- Enforcing decomposition, checkpoints, review cycles, and explicit sprint artifacts
+- Surfacing uncertainty and drift instead of hiding them
 
-Dax does **not** own process integrity yet.
-The implementation agent still executes the work.
-Dax shapes *how* that work is approached and reported.
+Dax does **not** own process integrity yet. The implementation agent executes the work. Dax shapes *how* that work is approached and reported.
 
-**Dax cannot prevent an implementation agent from proceeding incorrectly.** It can only warn when PRD and Epics are missing or underspecified. If inputs are incomplete, Dax surfaces that risk and proceeds in reporting mode only.
+**Dax cannot prevent an implementation agent from hallucinating or proceeding incorrectly.** It can only warn when required inputs are missing and ensure that work is verified and reviewed before progress continues.
 
 ---
 

@@ -1,6 +1,10 @@
 # Development Start Gateway
 
-**Purpose:** Surface planning gaps before implementation agents (like ii-agent) begin work. Dax cannot reliably stop or control other agents, so this gateway warns clearly and repeatedly.
+This gateway validates that required inputs are present and adequately specified before Dax begins shaping the workflow.
+
+**Purpose:** Dax relies on a Product Requirements Description and ranked Epic list to steer reliably. If these are missing or underspecified, implementation agents are likely to fill gaps by inference or hallucination. This gateway warns if that risk is present.
+
+**Important:** This gateway is **warn-only**. Dax cannot and does not prevent implementation agents from proceeding. It can only surface the risk clearly and ensure the risk is reviewed.
 
 ## What It Checks
 

@@ -1,56 +1,65 @@
 ## Dax v0.1 Installation
 
-install.sh downloads the Dax runtime files into a hidden `.dax/` folder in your target repository. It is POSIX sh, non-interactive, and defaults to the `main` reference unless `DAX_REF` is provided.
+Install Dax into your target repository. After installation, run bootstrap to see the opening message which explains everything Dax needs and what it will do.
 
-### Required Inputs
+### Install
 
-Dax relies on two documents to shape workflow reliably:
-
-1. **PRD.md** – Product Requirements Description
-   - Problem statement: what are you solving?
-   - Constraints: timeline, tech stack, compliance, budget
-   - Success criteria: how do you know you succeeded?
-
-2. **EPICS.md** – Ranked Epic List
-   - 3+ numbered epics
-   - Prioritized by dependency or business value
-   - Brief description for each
-
-See [docs/examples/PRD_EXAMPLE.md](../examples/PRD_EXAMPLE.md) and [docs/examples/EPIC_LIST_EXAMPLE.md](../examples/EPIC_LIST_EXAMPLE.md) for realistic examples.
-
-**The Development Start Gateway will warn if PRD.md or EPICS.md are missing or underspecified.** This is a warn-only gate–it does not block installation. However, implementation agents operating without clear inputs may hallucinate requirements and introduce unexpected scope.
-
-### Quick install (curl | sh)
 ```bash
 curl -fsSL https://raw.githubusercontent.com/hilbertp/dax-agent/main/install.sh | sh
 ```
 
-### Pinned install (recommended)
+Or with a specific commit (recommended for production):
+
 ```bash
 DAX_REF=<commit-or-tag> curl -fsSL https://raw.githubusercontent.com/hilbertp/dax-agent/main/install.sh | sh
 ```
 
-### Local run
+Or download and run locally:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/hilbertp/dax-agent/main/install.sh -o install.sh
 chmod +x install.sh
 ./install.sh /path/to/target
 ```
 
-### Verify
+### Bootstrap (required)
+
+After installation, run:
+
 ```bash
 .dax/agent/bootstrap.sh
 ```
 
-### Important Limitations
+This prints the Dax opening message, which describes:
+- What Dax needs (Product Requirements Description and ranked Epic list)
+- What Dax will do
+- What Dax will not do
+- The sprint contract
 
-**Dax cannot prevent implementation agents from proceeding incorrectly.**
+Read the opening message completely before proceeding.
 
-Dax shapes workflow and review–it does not implement. When bootstrap runs, it checks for PRD.md and EPICS.md and warns if they are missing or underspecified. But implementation agents (like ii-agent, code generators, or LLMs) often operate independently. They may:
+### Provide Required Inputs
 
-- Generate code without validating it against your PRD
-- Introduce scope not in your epic list
-- Misinterpret constraints or success criteria
-- Produce work that does not align with your actual goals
+Create two files in your repo root (as described in the opening message):
 
-A **complete, clear PRD and ranked epic list is your primary mechanism for steering the work.** Dax surfaces the risk; you must ensure your planning documents are specific and comprehensive.
+1. **PRD.md** – Product Requirements Description
+   - Problem statement
+   - Constraints (timeline, budget, tech stack, compliance)
+   - Success criteria
+
+2. **EPICS.md** – Ranked Epic list
+   - 3+ numbered epics
+   - Prioritized by dependency or value
+   - Brief description for each
+
+See `docs/examples/` in your `.dax/` folder for realistic examples.
+
+### Verify and Proceed
+
+Run bootstrap again:
+
+```bash
+.dax/agent/bootstrap.sh
+```
+
+If PRD.md and EPICS.md are present and adequately specified, Dax will acknowledge them and you can proceed with the workflow.
