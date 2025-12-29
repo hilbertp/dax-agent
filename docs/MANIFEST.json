@@ -30,16 +30,16 @@
     "agent/bootstrap.sh": {
       "path": "agent/bootstrap.sh",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/agent/bootstrap.sh",
-      "sha256": "60096b985599a9c29d710318bc754414fc7393988399dd0b366bd1e9bed9d160",
-      "size_bytes": 964
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
+      "sha256": "53c04916589098678c5b4e9408c5115a4a46ee89d9b0973e7491f49a3854e994",
+      "size_bytes": 1121
     },
     "agent/ensure_execution_summary.sh": {
       "path": "agent/ensure_execution_summary.sh",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/ensure_execution_summary.sh",
       "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/ensure_execution_summary.sh",
-      "sha256": "",
-      "size_bytes": 0
+      "sha256": "d4b9b4a17824ab889d51aefc68596312007d4df1ba20fb61dcaf501a06d90929",
+      "size_bytes": 750
     },
     "agent/snapshot_authority.sh": {
       "path": "agent/snapshot_authority.sh",
@@ -115,15 +115,15 @@
       "path": "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
       "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
-      "sha256": "",
-      "size_bytes": 0
+      "sha256": "d9cb33e794a7ffb5d81c311d7cdb542896e0d96f7a9d297c23ebc5032614d34b",
+      "size_bytes": 2951
     },
     "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": {
       "path": "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
-      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/d5a2f8c97fc258056d00c33d2a5e5d2c84fe1987/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
-      "sha256": "3cb9cba59dc697d67251b27776ec21de6b7fd52e0b1e8769998b115b7c9fbf3c",
-      "size_bytes": 2613
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+      "sha256": "92420c210f3ea77a57e20ee032e0c8c10f5de88d56b369da03a99a518a9a8573",
+      "size_bytes": 3023
     },
     "docs/control/WORKFLOW_BASELINE.md": {
       "path": "docs/control/WORKFLOW_BASELINE.md",
