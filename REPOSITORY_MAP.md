@@ -15,6 +15,7 @@ dax-agent/
 │       └── authority_snapshot.yml
 ├── agent/
 │   ├── bootstrap.sh
+│   ├── ensure_execution_summary.sh
 │   └── snapshot_authority.sh
 ├── docs/
 │   ├── authority/
@@ -28,6 +29,7 @@ dax-agent/
 │   │   ├── POST_MERGE_REGRESSION_POLICY.md
 │   │   ├── REGRESSION_OWNERSHIP.md
 │   │   ├── ROLLBACK_POLICY.md
+│   │   ├── SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
 │   │   ├── STAKEHOLDER_SPRINT_OUTPUT.md
 │   │   └── WORKFLOW_BASELINE.md
 │   ├── fallback/
@@ -108,6 +110,7 @@ dax-agent/
 ### `agent/`
 Bootstrap and automation scripts:
 - `bootstrap.sh` - Agent bootstrap script
+- `ensure_execution_summary.sh` - Sprint execution summary verification script
 - `snapshot_authority.sh` - Authority snapshot generation script
 
 ### `docs/`
@@ -127,6 +130,7 @@ Workflow control policies:
 - `POST_MERGE_REGRESSION_POLICY.md` - Post-merge regression test policy
 - `REGRESSION_OWNERSHIP.md` - Regression suite ownership guidelines
 - `ROLLBACK_POLICY.md` - Production rollback policy
+- `SPRINT_EXECUTION_SUMMARY_TEMPLATE.md` - Sprint execution summary template
 - `STAKEHOLDER_SPRINT_OUTPUT.md` - Stakeholder sprint output format
 - `WORKFLOW_BASELINE.md` - Frozen baseline workflow version
 
@@ -160,12 +164,12 @@ Each fallback snapshot contains:
 ## File Count Summary
 
 - **Total directories:** 16 (excluding .git)
-- **Total files:** 63 (excluding .git)
+- **Total files:** 66 (excluding .git)
   - Root: 3 (README.md, REPOSITORY_MAP.md, SHORT_TERM_ACTION_PLAN.md)
   - `.github/workflows/`: 1
-  - `agent/`: 2
+  - `agent/`: 3
   - `docs/authority/`: 5
-  - `docs/control/`: 6
+  - `docs/control/`: 7
   - `docs/fallback/`: 45 (9 snapshots × 5 files each)
   - `docs/visual/`: 1
   - `docs/`: 1 (MANIFEST.json)

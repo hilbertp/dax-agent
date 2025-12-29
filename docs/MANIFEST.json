@@ -132,6 +132,13 @@
       "sha256": "15955311affa6fd4ce8cb06000efc9082cad4b4fafb30e55859baade232fb406",
       "size_bytes": 294
     },
+    "docs/MANIFEST.json": {
+      "path": "docs/MANIFEST.json",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/MANIFEST.json",
+      "sha256": "cfaa4bbcc5c785fa539a57ddba87cd8ac59c85a1a52a05b55e3aa6c408aec08c",
+      "size_bytes": 30847
+    },
     "docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md": {
       "path": "docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/fallback/2025-12-24-0016/ACCEPTANCE_CRITERIA.md",
