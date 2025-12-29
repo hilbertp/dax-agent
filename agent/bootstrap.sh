@@ -32,7 +32,14 @@ if [ "$missing_files" -ne 0 ]; then
     exit 1
 fi
 
-# 4. Print canonical greeting and exit 0
+# 4. Run Development Start Gateway check (warn-only)
+GATEWAY_SCRIPT="$DAX_ROOT/agent/check_start_gateway.sh"
+if [ -f "$GATEWAY_SCRIPT" ]; then
+    TARGET_ROOT="$(cd "$DAX_ROOT/.." && pwd)" sh "$GATEWAY_SCRIPT" || true
+    echo ""
+fi
+
+# 5. Print canonical greeting and exit 0
 cat <<GREETING
 Greeting. I am Dax.
 I help design and build production grade software.

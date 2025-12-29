@@ -14,6 +14,7 @@ INSTALL_DIR=".dax"
 # This list must be kept in sync with RUNTIME_LOCKFILE.json
 RUNTIME_FILES="
 agent/bootstrap.sh
+agent/check_start_gateway.sh
 docs/MANIFEST.json
 docs/authority/WORKFLOW_OVERVIEW.md
 docs/authority/DECOMPOSITION.md
@@ -21,6 +22,7 @@ docs/authority/ACCEPTANCE_CRITERIA.md
 docs/authority/IDENTITY.md
 docs/control/STAKEHOLDER_SPRINT_OUTPUT.md
 docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
+docs/gateways/DEVELOPMENT_START_GATEWAY.md
 agent/snapshot_authority.sh
 agent/ensure_execution_summary.sh
 "
@@ -57,6 +59,7 @@ echo "Creating directory structure..."
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/agent"
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/authority"
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/control"
+mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/gateways"
 
 # Install runtime files
 echo "Installing runtime files..."
@@ -87,6 +90,7 @@ echo "Setting executable permissions..."
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/bootstrap.sh"
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/snapshot_authority.sh"
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/ensure_execution_summary.sh"
+chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/check_start_gateway.sh"
 
 # Verify installation
 echo ""

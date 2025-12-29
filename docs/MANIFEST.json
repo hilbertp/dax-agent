@@ -31,8 +31,15 @@
       "path": "agent/bootstrap.sh",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
       "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-      "sha256": "9b5dc33a7d8384ef2f142c4cada75608428de70c5c0302975ad5810c562ab9b0",
-      "size_bytes": 1451
+      "sha256": "f594486bd0d44beb8b24ff6491aebd167539b854bc91fad5d725070f6091e9d0",
+      "size_bytes": 1685
+    },
+    "agent/check_start_gateway.sh": {
+      "path": "agent/check_start_gateway.sh",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/check_start_gateway.sh",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/check_start_gateway.sh",
+      "sha256": "a7f94cae63ca3c73e5378d05c2a6d35b1361fcf5c06361583e55c476cb4a2794",
+      "size_bytes": 2487
     },
     "agent/ensure_execution_summary.sh": {
       "path": "agent/ensure_execution_summary.sh",
@@ -117,6 +124,13 @@
       "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
       "sha256": "d9cb33e794a7ffb5d81c311d7cdb542896e0d96f7a9d297c23ebc5032614d34b",
       "size_bytes": 2951
+    },
+    "docs/gateways/DEVELOPMENT_START_GATEWAY.md": {
+      "path": "docs/gateways/DEVELOPMENT_START_GATEWAY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/gateways/DEVELOPMENT_START_GATEWAY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/gateways/DEVELOPMENT_START_GATEWAY.md",
+      "sha256": "dfaa18967179e042cb30b7c28134d36c272c2b486df5066aa6cb13a62351e030",
+      "size_bytes": 4148
     },
     "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": {
       "path": "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",

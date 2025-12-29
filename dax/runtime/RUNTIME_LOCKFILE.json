@@ -23,22 +23,24 @@
       "description": "Runtime behavior control policies",
       "files": [
         "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
-        "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md"
+        "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
+        "docs/gateways/DEVELOPMENT_START_GATEWAY.md"
       ]
     },
     "enforcement": {
       "description": "Verification and enforcement scripts",
       "files": [
         "agent/snapshot_authority.sh",
-        "agent/ensure_execution_summary.sh"
+        "agent/ensure_execution_summary.sh",
+        "agent/check_start_gateway.sh"
       ]
     }
   },
   "install_requirements": {
-    "total_files": 10,
+    "total_files": 13,
     "file_types": {
-      "shell_scripts": 2,
-      "markdown_documents": 6,
+      "shell_scripts": 3,
+      "markdown_documents": 8,
       "json_manifest": 1,
       "json_metadata": 0
     },
@@ -46,6 +48,7 @@
       "agent/",
       "docs/authority/",
       "docs/control/",
+      "docs/gateways/",
       "docs/"
     ],
     "permissions": [
@@ -59,6 +62,10 @@
       },
       {
         "path": "agent/ensure_execution_summary.sh",
+        "mode": "0755"
+      },
+      {
+        "path": "agent/check_start_gateway.sh",
         "mode": "0755"
       }
     ]
