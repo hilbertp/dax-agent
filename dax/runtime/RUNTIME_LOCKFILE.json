@@ -1,0 +1,72 @@
+{
+  "lockfile_version": "1.0.0",
+  "derived_from": "dax/runtime/RUNTIME_DEFINITION.json",
+  "purpose": "Concrete runtime footprint specification for Dax installation",
+  "runtime_files": {
+    "bootstrap": {
+      "description": "Entry point and initialization",
+      "files": [
+        "agent/bootstrap.sh",
+        "docs/MANIFEST.json"
+      ]
+    },
+    "authority": {
+      "description": "Authoritative workflow definitions verified at bootstrap",
+      "files": [
+        "docs/authority/WORKFLOW_OVERVIEW.md",
+        "docs/authority/DECOMPOSITION.md",
+        "docs/authority/ACCEPTANCE_CRITERIA.md",
+        "docs/authority/IDENTITY.md"
+      ]
+    },
+    "control": {
+      "description": "Runtime behavior control policies",
+      "files": [
+        "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+        "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md"
+      ]
+    },
+    "enforcement": {
+      "description": "Verification and enforcement scripts",
+      "files": [
+        "agent/snapshot_authority.sh",
+        "agent/ensure_execution_summary.sh"
+      ]
+    }
+  },
+  "install_requirements": {
+    "total_files": 10,
+    "file_types": {
+      "shell_scripts": 2,
+      "markdown_documents": 6,
+      "json_manifest": 1,
+      "json_metadata": 0
+    },
+    "directory_structure": [
+      "agent/",
+      "docs/authority/",
+      "docs/control/",
+      "docs/"
+    ],
+    "permissions": [
+      {
+        "path": "agent/bootstrap.sh",
+        "mode": "0755"
+      },
+      {
+        "path": "agent/snapshot_authority.sh",
+        "mode": "0755"
+      },
+      {
+        "path": "agent/ensure_execution_summary.sh",
+        "mode": "0755"
+      }
+    ]
+  },
+  "verification": {
+    "all_files_must_exist": true,
+    "all_markdown_must_be_readable": true,
+    "all_scripts_must_be_executable": true,
+    "manifest_must_contain_all_runtime_files": true
+  }
+}
