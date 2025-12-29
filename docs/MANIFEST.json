@@ -31,8 +31,8 @@
       "path": "agent/bootstrap.sh",
       "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
       "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/agent/bootstrap.sh",
-      "sha256": "53c04916589098678c5b4e9408c5115a4a46ee89d9b0973e7491f49a3854e994",
-      "size_bytes": 1121
+      "sha256": "9b5dc33a7d8384ef2f142c4cada75608428de70c5c0302975ad5810c562ab9b0",
+      "size_bytes": 1451
     },
     "agent/ensure_execution_summary.sh": {
       "path": "agent/ensure_execution_summary.sh",
