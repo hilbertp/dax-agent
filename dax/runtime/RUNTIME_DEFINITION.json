@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Defines the minimal set of files required for Dax workflow framework runtime operation",
+  "runtime_categories": {
+    "bootstrap": {
+      "description": "Entry point and initialization",
+      "required": true,
+      "files": [
+        "agent/bootstrap.sh",
+        "docs/MANIFEST.json"
+      ]
+    },
+    "authority": {
+      "description": "Authoritative workflow definitions verified at bootstrap",
+      "required": true,
+      "files": [
+        "docs/authority/WORKFLOW_OVERVIEW.md",
+        "docs/authority/DECOMPOSITION.md",
+        "docs/authority/ACCEPTANCE_CRITERIA.md",
+        "docs/authority/IDENTITY.md"
+      ]
+    },
+    "control": {
+      "description": "Runtime behavior control policies",
+      "required": true,
+      "files": [
+        "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
+        "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md"
+      ]
+    },
+    "enforcement": {
+      "description": "Verification and enforcement scripts",
+      "required": true,
+      "files": [
+        "agent/snapshot_authority.sh",
+        "agent/ensure_execution_summary.sh"
+      ]
+    }
+  },
+  "invariants": {
+    "bootstrap_verification": "All files in 'authority' category must be verified by bootstrap.sh",
+    "sprint_artifacts": "Each sprint must produce an execution summary linking to SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
+    "file_existence": "All listed files must exist and be readable at runtime",
+    "execution_permissions": "All .sh files must have execute permissions"
+  },
+  "exclusions": {
+    "fallback_snapshots": "Historical authority snapshots are not required for runtime operation",
+    "visual_documentation": "Workflow diagrams and visual aids are not required for runtime operation",
+    "repository_metadata": "README, REPOSITORY_MAP, and similar files are not required for runtime operation"
+  }
+}
