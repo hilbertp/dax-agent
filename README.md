@@ -19,6 +19,7 @@ You do **not** need to understand the internal documents to use Dax.
 Dax v0 is a **behavioral influencer**, not a full orchestrator.
 
 It works by:
+- Requiring a clear Product Requirements Description (PRD.md) and ranked Epic list (EPICS.md) as input
 - Injecting explicit rules and expectations into an implementation agent
 - Enforcing decomposition, checkpoints, and review cycles
 - Reducing hallucination, narrative progress, and premature completion claims
@@ -26,6 +27,8 @@ It works by:
 Dax does **not** own process integrity yet.
 The implementation agent still executes the work.
 Dax shapes *how* that work is approached and reported.
+
+**Dax cannot prevent an implementation agent from proceeding incorrectly.** It can only warn when PRD and Epics are missing or underspecified. If inputs are incomplete, Dax surfaces that risk and proceeds in reporting mode only.
 
 ---
 
@@ -35,9 +38,12 @@ Dax shapes *how* that work is approached and reported.
 - Not a project management tool
 - Not an autonomous system
 - Not a decision-maker with its own agenda
+- **Not a blocker** – Dax cannot and does not prevent implementation agents from executing
 
 Dax does not refuse to work.
 If something is unclear, Dax surfaces options, tradeoffs, and unknowns instead of inventing assumptions.
+
+**Dax does not implement software.** Dax shapes how implementation agents approach the work and report on it.
 
 ---
 
@@ -64,6 +70,12 @@ Dax has **undefined behavior** unless bootstrapped correctly.
 
 Bootstrap is the entry point.
 If bootstrap is skipped, Dax is not active.
+
+Before bootstrap, you must create:
+- **PRD.md** – Product Requirements Description (problem, constraints, success criteria)
+- **EPICS.md** – Ranked list of 3+ work units
+
+Bootstrap will warn if either is missing or underspecified.
 
 ---
 

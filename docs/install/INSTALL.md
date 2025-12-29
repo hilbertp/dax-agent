@@ -1,8 +1,24 @@
 ## Dax v0.1 Installation
 
-install.sh downloads the Dax runtime files listed in dax/runtime/RUNTIME_LOCKFILE.json into a hidden `.dax/` folder in your target repository, sets executable bits on the shipped scripts, and refuses to run inside the dax-agent source tree. It is POSIX sh, non-interactive, and defaults to the `main` reference unless `DAX_REF` is provided.
+install.sh downloads the Dax runtime files into a hidden `.dax/` folder in your target repository. It is POSIX sh, non-interactive, and defaults to the `main` reference unless `DAX_REF` is provided.
 
-**Before you begin**: Create `PRD.md` and `EPICS.md` in your repo root. The Development Start Gateway will warn if they are missing or underspecified. See [docs/gateways/DEVELOPMENT_START_GATEWAY.md](../gateways/DEVELOPMENT_START_GATEWAY.md) and [docs/examples/](../examples/) for templates and examples.
+### Required Inputs
+
+Dax relies on two documents to shape workflow reliably:
+
+1. **PRD.md** – Product Requirements Description
+   - Problem statement: what are you solving?
+   - Constraints: timeline, tech stack, compliance, budget
+   - Success criteria: how do you know you succeeded?
+
+2. **EPICS.md** – Ranked Epic List
+   - 3+ numbered epics
+   - Prioritized by dependency or business value
+   - Brief description for each
+
+See [docs/examples/PRD_EXAMPLE.md](../examples/PRD_EXAMPLE.md) and [docs/examples/EPIC_LIST_EXAMPLE.md](../examples/EPIC_LIST_EXAMPLE.md) for realistic examples.
+
+**The Development Start Gateway will warn if PRD.md or EPICS.md are missing or underspecified.** This is a warn-only gate–it does not block installation. However, implementation agents operating without clear inputs may hallucinate requirements and introduce unexpected scope.
 
 ### Quick install (curl | sh)
 ```bash
@@ -26,4 +42,15 @@ chmod +x install.sh
 .dax/agent/bootstrap.sh
 ```
 
-The Development Start Gateway is **warn-only**: if PRD.md or EPICS.md are missing, you will see a warning but installation will not fail. However, implementation agents (like ii-agent) operating without a complete PRD and epic list may hallucinate scope and miss constraints.
+### Important Limitations
+
+**Dax cannot prevent implementation agents from proceeding incorrectly.**
+
+Dax shapes workflow and review–it does not implement. When bootstrap runs, it checks for PRD.md and EPICS.md and warns if they are missing or underspecified. But implementation agents (like ii-agent, code generators, or LLMs) often operate independently. They may:
+
+- Generate code without validating it against your PRD
+- Introduce scope not in your epic list
+- Misinterpret constraints or success criteria
+- Produce work that does not align with your actual goals
+
+A **complete, clear PRD and ranked epic list is your primary mechanism for steering the work.** Dax surfaces the risk; you must ensure your planning documents are specific and comprehensive.
