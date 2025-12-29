@@ -20,8 +20,8 @@ To begin, I need two things:
 2. **ranked list of epics**
 
 Example formats:  
-[Link to PRD example]  
-[Link to Epic list example]
+<a href="docs/examples/PRD_EXAMPLE.md" target="_blank">Link to PRD example</a>  
+<a href="docs/examples/EPIC_LIST_EXAMPLE.md" target="_blank">Link to Epic list example</a>
 
 > **Important**
 >

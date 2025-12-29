@@ -13,7 +13,27 @@ if [ ! -f "$CANONICAL_FILE" ]; then
     exit 1
 fi
 
-# Capture bootstrap output, extract opening message (everything before any gateway warning)
+# Test 1: Assert no PRD/Epics placeholder lines in canonical file
+if grep -q '\[Link to PRD example\]' "$CANONICAL_FILE"; then
+    echo "✗ Canonical file still contains placeholder: [Link to PRD example]"
+    exit 1
+fi
+echo "✓ PRD example placeholder replaced with real link"
+
+if grep -q '\[Link to Epic list example\]' "$CANONICAL_FILE"; then
+    echo "✗ Canonical file still contains placeholder: [Link to Epic list example]"
+    exit 1
+fi
+echo "✓ Epic list example placeholder replaced with real link"
+
+# Test 2: Assert MDAP placeholder is still present unchanged
+if ! grep -q '\[Link to how MDAP works\]' "$CANONICAL_FILE"; then
+    echo "✗ MDAP placeholder missing: [Link to how MDAP works]"
+    exit 1
+fi
+echo "✓ MDAP placeholder preserved unchanged"
+
+# Test 3: Capture bootstrap output, extract opening message (everything before any gateway warning)
 BOOTSTRAP_OUTPUT="$($DAX_ROOT/agent/bootstrap.sh 2>&1)"
 
 # Extract just the opening message (stop at "⚠" if present, otherwise whole output)
