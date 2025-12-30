@@ -45,7 +45,7 @@ fi
 echo ""
 GATEWAY_SCRIPT="$DAX_ROOT/agent/check_start_gateway.sh"
 if [ -f "$GATEWAY_SCRIPT" ]; then
-    TARGET_ROOT="$(cd "$DAX_ROOT/.." && pwd)" sh "$GATEWAY_SCRIPT" || true
+    TARGET_ROOT="$DAX_ROOT" sh "$GATEWAY_SCRIPT" || true
 fi
 
 exit 0
