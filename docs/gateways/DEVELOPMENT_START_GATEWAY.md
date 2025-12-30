@@ -4,7 +4,55 @@ This gateway validates that required inputs are present and adequately specified
 
 **Purpose:** Dax relies on a Product Requirements Description and ranked Epic list to steer reliably. If these are missing or underspecified, implementation agents are likely to fill gaps by inference or hallucination. This gateway warns if that risk is present.
 
-**Important:** This gateway is **warn-only**. Dax cannot and does not prevent implementation agents from proceeding. It can only surface the risk clearly and ensure the risk is reviewed.
+**Important:** This gateway is **warn-only**. Dax cannot and does not prevent implementation agents from proceeding. It can only surface the risk clearly and ensure the risk is reviewed. Exit code is always `0`.
+
+## How It Finds PRD and Epics (Repository-First)
+
+1. Determine the repository root via `git rev-parse --show-toplevel`; if unavailable, use the current working directory.
+2. Search **only** within the repository for candidate files (persistent context), then fall back to `/upload` (session-scoped) **only if missing in the repo**.
+3. Searchable extensions: `.md`, `.txt`, `.rst`, `.adoc` (text files under 1 MB).
+4. Excluded directories: `.git`, `node_modules`, `dist`, `build`, `vendor`, `.dax`.
+5. The gateway never moves files; it only reports what it finds.
+
+## Heuristics (Content-Based, Warn-Only)
+
+### PRD candidate signals
+- Mentions of **Problem**, **Constraints**, **Success Criteria** (headings or text)
+- Phrases: **Product Requirements** or **PRD**
+- Confidence mapping: `high` when signals cover all three core concepts or phrase + breadth; `medium` when at least two core concepts are present; `low` when only one is present.
+
+Confidence dampening (not enforcement):
+- If the same file is selected for PRD and Epics, confidence for both is reduced.
+- If the path looks like a report/summary/diagnostic/log/notes/readme, confidence is reduced.
+- If the path does not suggest requirements/planning (e.g., lacks `prd`, `requirement`, `spec`, `plan`), confidence is reduced.
+
+### Epic list candidate signals
+- Mentions of **Epics**
+- Numbered items (3 or more) using `1.`, `2.`, `3.` …
+- References like `Epic 1` or `Epic:`
+- Confidence mapping: `high` when epics are named and 3+ numbered items exist; `medium` with partial coverage; `low` with minimal evidence.
+
+Confidence dampening (not enforcement):
+- If the same file is selected for PRD and Epics, confidence for both is reduced.
+- If the path looks like a report/summary/diagnostic/log/notes/readme, confidence is reduced.
+- If the path does not suggest epics/roadmap/backlog/plan, confidence is reduced.
+
+## Selection and Reporting
+- Picks the highest-scoring PRD and Epic file above a minimum threshold; lists top three candidates if confidence is `medium`.
+- Reports:
+  - Whether PRD and epics were found
+  - Selected file paths
+  - Confidence (`high`, `medium`, `low`)
+  - Alternatives (when confidence is `medium`)
+- If missing in the repository but found in `/upload`, prints a warning that `/upload` is session-scoped and recommends copying into the repo.
+- If missing everywhere, warns and asks for a PRD and ranked epic list.
+
+## Output Rules
+
+- Opening message is printed **first** by `bootstrap.sh`, then this gateway runs.
+- If both PRD and epics are found with `high` confidence in the repo: prints `OK` and paths.
+- If confidence is `medium` or `low`, or if `/upload` was used: prints `WARNING` with guidance on next steps.
+- If missing: prints `WARNING` with explicit asks for PRD and epics.
 
 ## What It Checks
 
