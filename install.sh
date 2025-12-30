@@ -22,7 +22,7 @@ docs/authority/ACCEPTANCE_CRITERIA.md
 docs/authority/IDENTITY.md
 docs/control/STAKEHOLDER_SPRINT_OUTPUT.md
 docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
-docs/gateways/DEVELOPMENT_START_GATEWAY.md
+docs/control/DEVELOPMENT_START_GATEWAY.md
 agent/snapshot_authority.sh
 agent/ensure_execution_summary.sh
 "
@@ -59,7 +59,6 @@ echo "Creating directory structure..."
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/agent"
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/authority"
 mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/control"
-mkdir -p "$TARGET_DIR/$INSTALL_DIR/docs/gateways"
 
 # Install runtime files
 echo "Installing runtime files..."

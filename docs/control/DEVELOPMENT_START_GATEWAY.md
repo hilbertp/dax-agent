@@ -153,7 +153,7 @@ TARGET_ROOT=/tmp/test-complete .dax/agent/check_start_gateway.sh
 
 ## Files and Links
 
-- Policy: [docs/gateways/DEVELOPMENT_START_GATEWAY.md](DEVELOPMENT_START_GATEWAY.md) (this file)
+- Policy: [docs/control/DEVELOPMENT_START_GATEWAY.md](DEVELOPMENT_START_GATEWAY.md) (this file)
 - Check script: [agent/check_start_gateway.sh](../../agent/check_start_gateway.sh)
 - PRD example: [docs/examples/PRD_EXAMPLE.md](../examples/PRD_EXAMPLE.md)
 - Epic example: [docs/examples/EPIC_LIST_EXAMPLE.md](../examples/EPIC_LIST_EXAMPLE.md)

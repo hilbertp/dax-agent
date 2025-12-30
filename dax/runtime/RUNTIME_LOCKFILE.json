@@ -24,7 +24,7 @@
       "files": [
         "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
         "docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md",
-        "docs/gateways/DEVELOPMENT_START_GATEWAY.md"
+        "docs/control/DEVELOPMENT_START_GATEWAY.md"
       ]
     },
     "enforcement": {
@@ -48,7 +48,6 @@
       "agent/",
       "docs/authority/",
       "docs/control/",
-      "docs/gateways/",
       "docs/"
     ],
     "permissions": [

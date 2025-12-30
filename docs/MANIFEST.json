@@ -125,12 +125,12 @@
       "sha256": "d9cb33e794a7ffb5d81c311d7cdb542896e0d96f7a9d297c23ebc5032614d34b",
       "size_bytes": 2951
     },
-    "docs/gateways/DEVELOPMENT_START_GATEWAY.md": {
-      "path": "docs/gateways/DEVELOPMENT_START_GATEWAY.md",
-      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/gateways/DEVELOPMENT_START_GATEWAY.md",
-      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/gateways/DEVELOPMENT_START_GATEWAY.md",
-      "sha256": "dfaa18967179e042cb30b7c28134d36c272c2b486df5066aa6cb13a62351e030",
-      "size_bytes": 4148
+    "docs/control/DEVELOPMENT_START_GATEWAY.md": {
+      "path": "docs/control/DEVELOPMENT_START_GATEWAY.md",
+      "raw_url_branch": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/DEVELOPMENT_START_GATEWAY.md",
+      "raw_url_commit": "https://raw.githubusercontent.com/hilbertp/dax-agent/main/docs/control/DEVELOPMENT_START_GATEWAY.md",
+      "sha256": "6ac7bff63d94b87b90177d0b58527433cc928fab449597bf675d8e4bd3741c0d",
+      "size_bytes": 7338
     },
     "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md": {
       "path": "docs/control/STAKEHOLDER_SPRINT_OUTPUT.md",
