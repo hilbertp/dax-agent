@@ -16,11 +16,6 @@ This document defines the meaning and invariants of repository folders. It is sh
 - Explanatory content for humans
 - No rules and no enforcement
 
-## docs/fallback/
-- Archival snapshots and recovery artifacts
-- Never treated as active rules
-- MUST NOT be referenced in `docs/MANIFEST.json`
-
 ## docs/MANIFEST.json
 - Canonical index of behavior-relevant files
 - MUST point to `main` only, never branches
@@ -30,7 +25,7 @@ This document defines the meaning and invariants of repository folders. It is sh
 - No behavior definition logic
 
 ## .github/workflows/
-- Automation only (snapshots, checks)
+- Automation only (CI/CD checks)
 - Workflow files MUST reside in `.github/workflows/`, never in repository root
 
 ## Repository Root

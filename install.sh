@@ -23,7 +23,6 @@ docs/authority/IDENTITY.md
 docs/control/STAKEHOLDER_SPRINT_OUTPUT.md
 docs/control/SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
 docs/control/DEVELOPMENT_START_GATEWAY.md
-agent/snapshot_authority.sh
 agent/ensure_execution_summary.sh
 "
 
@@ -87,7 +86,6 @@ echo "Installed $installed_count files."
 echo ""
 echo "Setting executable permissions..."
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/bootstrap.sh"
-chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/snapshot_authority.sh"
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/ensure_execution_summary.sh"
 chmod +x "$TARGET_DIR/$INSTALL_DIR/agent/check_start_gateway.sh"
 

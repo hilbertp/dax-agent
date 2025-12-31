@@ -2,7 +2,7 @@
 
 **Repository:** hilbertp/dax-agent  
 **Branch:** main  
-**Generated:** 2025-12-29
+**Generated:** 2025-12-30
 
 ---
 
@@ -10,13 +10,14 @@
 
 ```
 dax-agent/
-├── .github/
-│   └── workflows/
-│       └── authority_snapshot.yml
 ├── agent/
 │   ├── bootstrap.sh
-│   ├── ensure_execution_summary.sh
-│   └── snapshot_authority.sh
+│   ├── check_start_gateway.sh
+│   └── ensure_execution_summary.sh
+├── dax/
+│   └── runtime/
+│       ├── RUNTIME_DEFINITION.json
+│       └── RUNTIME_LOCKFILE.json
 ├── docs/
 │   ├── authority/
 │   │   ├── ACCEPTANCE_CRITERIA.md
@@ -25,6 +26,7 @@ dax-agent/
 │   │   ├── REPO_STRUCTURE.md
 │   │   └── WORKFLOW_OVERVIEW.md
 │   ├── control/
+│   │   ├── DEVELOPMENT_START_GATEWAY.md
 │   │   ├── MERGE_TRIGGER.md
 │   │   ├── POST_MERGE_REGRESSION_POLICY.md
 │   │   ├── REGRESSION_OWNERSHIP.md
@@ -32,67 +34,22 @@ dax-agent/
 │   │   ├── SPRINT_EXECUTION_SUMMARY_TEMPLATE.md
 │   │   ├── STAKEHOLDER_SPRINT_OUTPUT.md
 │   │   └── WORKFLOW_BASELINE.md
-│   ├── fallback/
-│   │   ├── 2025-12-24-0016/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-24-0020/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-24-1253/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-26-1333/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-26-1412/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-26-1620/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-26-1757/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   ├── 2025-12-26-1821/
-│   │   │   ├── ACCEPTANCE_CRITERIA.md
-│   │   │   ├── DECOMPOSITION.md
-│   │   │   ├── FALLBACK.json
-│   │   │   ├── IDENTITY.md
-│   │   │   └── WORKFLOW_OVERVIEW.md
-│   │   └── 2025-12-27-0022/
-│   │       ├── ACCEPTANCE_CRITERIA.md
-│   │       ├── DECOMPOSITION.md
-│   │       ├── FALLBACK.json
-│   │       ├── IDENTITY.md
-│   │       └── WORKFLOW_OVERVIEW.md
+│   ├── examples/
+│   │   ├── EPIC_LIST_EXAMPLE.md
+│   │   └── PRD_EXAMPLE.md
+│   ├── install/
+│   │   ├── BOOTSTRAP_RELOCATABLE.md
+│   │   └── INSTALL.md
+│   ├── prompts/
+│   │   └── OPENING_MESSAGE.md
 │   ├── visual/
 │   │   └── WORKFLOW_FLOW.md
 │   └── MANIFEST.json
+├── install.sh
 ├── README.md
 ├── REPOSITORY_MAP.md
-└── SHORT_TERM_ACTION_PLAN.md
+├── test_gateway_discovery.sh
+└── test_opening_message.sh
 ```
 
 ---
@@ -100,18 +57,17 @@ dax-agent/
 ## Directory Breakdown
 
 ### Root Level
-- `README.md` - Repository documentation
-- `REPOSITORY_MAP.md` - This file (complete directory and file structure map)
-- `SHORT_TERM_ACTION_PLAN.md` - Current sprint action plan
-
-### `.github/workflows/`
-- `authority_snapshot.yml` - GitHub Actions workflow for authority snapshots
+- `README.md` - Repository overview
+- `REPOSITORY_MAP.md` - This file (structure map)
+- `install.sh` - Runtime installer
+- `test_gateway_discovery.sh` - Gateway discovery smoke tests
+- `test_opening_message.sh` - Opening message integrity test
 
 ### `agent/`
 Bootstrap and automation scripts:
 - `bootstrap.sh` - Agent bootstrap script
+- `check_start_gateway.sh` - Development Start Gateway heuristic checker (warn-only)
 - `ensure_execution_summary.sh` - Sprint execution summary verification script
-- `snapshot_authority.sh` - Authority snapshot generation script
 
 ### `docs/`
 Primary documentation directory
@@ -132,26 +88,21 @@ Workflow control policies:
 - `ROLLBACK_POLICY.md` - Production rollback policy
 - `SPRINT_EXECUTION_SUMMARY_TEMPLATE.md` - Sprint execution summary template
 - `STAKEHOLDER_SPRINT_OUTPUT.md` - Stakeholder sprint output format
+- `DEVELOPMENT_START_GATEWAY.md` - Development Start Gateway policy (relocated from docs/gateways/)
 - `WORKFLOW_BASELINE.md` - Frozen baseline workflow version
 
-#### `docs/fallback/`
-Historical authority snapshots (timestamped):
-- `2025-12-24-0016/`
-- `2025-12-24-0020/`
-- `2025-12-24-1253/`
-- `2025-12-26-1333/`
-- `2025-12-26-1412/`
-- `2025-12-26-1620/`
-- `2025-12-26-1757/`
-- `2025-12-26-1821/`
-- `2025-12-27-0022/`
+#### `docs/examples/`
+Templates and examples:
+- `PRD_EXAMPLE.md` - Product Requirements Description example
+- `EPIC_LIST_EXAMPLE.md` - Epic list example
 
-Each fallback snapshot contains:
-- `ACCEPTANCE_CRITERIA.md`
-- `DECOMPOSITION.md`
-- `FALLBACK.json` - Snapshot metadata
-- `IDENTITY.md`
-- `WORKFLOW_OVERVIEW.md`
+#### `docs/install/`
+Install and relocation notes:
+- `INSTALL.md` - Install instructions
+- `BOOTSTRAP_RELOCATABLE.md` - Relocatability guidance
+
+#### `docs/prompts/`
+- `OPENING_MESSAGE.md` - Canonical kickoff message printed by bootstrap
 
 #### `docs/visual/`
 - `WORKFLOW_FLOW.md` - Visual workflow documentation
@@ -163,14 +114,16 @@ Each fallback snapshot contains:
 
 ## File Count Summary
 
-- **Total directories:** 16 (excluding .git)
-- **Total files:** 66 (excluding .git)
-  - Root: 3 (README.md, REPOSITORY_MAP.md, SHORT_TERM_ACTION_PLAN.md)
-  - `.github/workflows/`: 1
+- **Total directories:** 13 (excluding .git)
+- **Total files:** 30 (excluding .git)
+  - Root: 5 (README.md, REPOSITORY_MAP.md, install.sh, test_gateway_discovery.sh, test_opening_message.sh)
   - `agent/`: 3
+  - `dax/runtime/`: 2
   - `docs/authority/`: 5
-  - `docs/control/`: 7
-  - `docs/fallback/`: 45 (9 snapshots × 5 files each)
+  - `docs/control/`: 8 (includes DEVELOPMENT_START_GATEWAY.md)
+  - `docs/examples/`: 2
+  - `docs/install/`: 2
+  - `docs/prompts/`: 1
   - `docs/visual/`: 1
   - `docs/`: 1 (MANIFEST.json)
 

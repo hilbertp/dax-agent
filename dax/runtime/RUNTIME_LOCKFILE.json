@@ -30,16 +30,15 @@
     "enforcement": {
       "description": "Verification and enforcement scripts",
       "files": [
-        "agent/snapshot_authority.sh",
         "agent/ensure_execution_summary.sh",
         "agent/check_start_gateway.sh"
       ]
     }
   },
   "install_requirements": {
-    "total_files": 13,
+    "total_files": 12,
     "file_types": {
-      "shell_scripts": 3,
+      "shell_scripts": 2,
       "markdown_documents": 8,
       "json_manifest": 1,
       "json_metadata": 0
@@ -53,10 +52,6 @@
     "permissions": [
       {
         "path": "agent/bootstrap.sh",
-        "mode": "0755"
-      },
-      {
-        "path": "agent/snapshot_authority.sh",
         "mode": "0755"
       },
       {

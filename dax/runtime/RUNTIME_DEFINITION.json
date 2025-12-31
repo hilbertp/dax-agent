@@ -33,7 +33,6 @@
       "description": "Verification and enforcement scripts",
       "required": true,
       "files": [
-        "agent/snapshot_authority.sh",
         "agent/ensure_execution_summary.sh",
         "agent/check_start_gateway.sh"
       ]
@@ -46,7 +45,6 @@
     "execution_permissions": "All .sh files must have execute permissions"
   },
   "exclusions": {
-    "fallback_snapshots": "Historical authority snapshots are not required for runtime operation",
     "visual_documentation": "Workflow diagrams and visual aids are not required for runtime operation",
     "repository_metadata": "README, REPOSITORY_MAP, and similar files are not required for runtime operation",
     "examples": "Example templates (PRD_EXAMPLE.md, EPIC_LIST_EXAMPLE.md) are documentation aids, not required for runtime"

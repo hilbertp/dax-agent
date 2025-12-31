@@ -26,6 +26,5 @@ flowchart TD
 
     M --> N[Automated Main Branch Actions]
     N --> O[Validate Authority Docs]
-    O --> P[Create Automated Fallback Snapshot]
-    P --> Q[Propose Next Sprint<br/>Wait for Approval]
+    O --> Q[Propose Next Sprint<br/>Wait for Approval]
 ```
