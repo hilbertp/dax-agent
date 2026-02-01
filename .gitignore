@@ -1,0 +1,6 @@
+e2e/user_data/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.ssh/

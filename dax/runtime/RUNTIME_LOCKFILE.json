@@ -33,10 +33,16 @@
         "agent/ensure_execution_summary.sh",
         "agent/check_start_gateway.sh"
       ]
+    },
+    "prompts": {
+      "description": "User-facing messages displayed by bootstrap",
+      "files": [
+        "docs/prompts/OPENING_MESSAGE.md"
+      ]
     }
   },
   "install_requirements": {
-    "total_files": 12,
+    "total_files": 13,
     "file_types": {
       "shell_scripts": 2,
       "markdown_documents": 8,
@@ -47,6 +53,7 @@
       "agent/",
       "docs/authority/",
       "docs/control/",
+      "docs/prompts/",
       "docs/"
     ],
     "permissions": [

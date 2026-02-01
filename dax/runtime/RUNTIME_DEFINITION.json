@@ -36,6 +36,13 @@
         "agent/ensure_execution_summary.sh",
         "agent/check_start_gateway.sh"
       ]
+    },
+    "prompts": {
+      "description": "User-facing messages displayed by bootstrap",
+      "required": true,
+      "files": [
+        "docs/prompts/OPENING_MESSAGE.md"
+      ]
     }
   },
   "invariants": {
