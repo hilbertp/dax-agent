@@ -28,14 +28,39 @@ if [ ! -f "$EPIC_LIST_PATH" ]; then
 else
     echo "✓ Found Epic List: $EPIC_LIST_PATH"
     
-    # 4. Extract Epic Name
+    # 4. Extract Epic Name and Content
     # Matches "## Epic <ID>:" or "## Epic <ID>" case insensitive
-    # This logic assumes the Markdown format "# Epic List... ## Epic 1: Name"
     EPIC_HEADER=$(grep -i -m 1 "## Epic ${TARGET_ID}" "$EPIC_LIST_PATH")
     
     if [ -n "$EPIC_HEADER" ]; then
         echo "✓ Found Target: $EPIC_HEADER"
+        
+        # Extract PRD Content
+        PRD_CONTENT=$(cat "$PRD_PATH")
+        
+        # Extract Epic Content
+        # Uses awk to print from the found header until the next "## Epic" or end of file
+        # We search for the specific header we found
+        EPIC_CONTENT=$(awk -v header="$EPIC_HEADER" '
+            $0 ~ header { flag=1; print; next }
+            flag && /^## Epic/ { flag=0; exit }
+            flag { print }
+        ' "$EPIC_LIST_PATH")
+        
+        echo "---------------------------------------------------"
+        echo "DEBUG: CONTEXT GATHERING VERIFICATION"
+        echo "---------------------------------------------------"
+        echo "PRD Content Length: ${#PRD_CONTENT} chars"
+        echo "Target Epic Content Length: ${#EPIC_CONTENT} chars"
+        echo ""
+        echo "--- SNIPPET: EPIC CONTENT ---"
+        echo "$EPIC_CONTENT" | head -n 10
+        echo "..."
+        echo "---------------------------------------------------"
+        
     else
         echo "Warning: Epic $TARGET_ID not found in list."
+        exit 1
     fi
 fi
+
